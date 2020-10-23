@@ -190,6 +190,9 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		if len(line) >=9 && line[:7] == "Subject" {
 			m.Headers.Subject = line[8:]
 		}
+
+		fmt.Println(line)
+
 	}
 
 	return nil
