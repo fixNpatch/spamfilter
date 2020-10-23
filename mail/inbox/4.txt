@@ -1,0 +1,180 @@
+Delivered-To: dagon_bleach@mail.ru
+Return-path: <mail-12225716@devinosender.com>
+Received-SPF: pass (mx315.i.mail.ru: domain of devinosender.com designates 185.205.67.71 as permitted sender) client-ip=185.205.67.71; envelope-from=mail-12225716@devinosender.com; helo=host.67.71.devinosender.com;
+Received: from host.67.71.devinosender.com ([185.205.67.71]:48252)
+	by mx315.i.mail.ru with esmtp (envelope-from <mail-12225716@devinosender.com>)
+	id 1i5US2-0000KE-5f
+	for dagon_bleach@mail.ru; Wed, 04 Sep 2019 15:31:54 +0300
+From: =?utf-8?b?0J/QkNCeICLQodCw0YDQsNGC0L7QstGN0L3QtdGA0LPQviI=?=
+	<noreply@mpi.sarenergo.ru>
+Date: Wed, 04 Sep 2019 15:31:54 +0300
+Subject: =?UTF-8?B?0J/QkNCeICLQodCw0YDQsNGC0L7QstGN0L3QtdGA0LPQviIuINCh0YfQtdGCINC30LAg0Y3Qu9C10LrRgtGA0L7RjdC90LXRgNCz0LjRjiDQt9CwINCw0LLQs9GD0YHRgiAyMDE5Lg==?=
+Message-ID: <MiSR1FbMMyH@devinosender.com>
+To: dagon_bleach@mail.ru
+List-Unsubscribe: <http://click.email4customers.com/Unsubscribe?messageId=MiSR1FbMMyH>
+Precedence: bulk
+List-Id: <12225716>
+X-Feedback-ID: MiSR1FbMMyH:12225716:devinosender.com
+X-Mailru-Msgtype: 12225716
+X-Report-Abuse-To: abuse@devinosender.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Id: <5BROJ3X0H8U4.Q0NOQ3CEKQAV@app-server03>
+Content-Transfer-Encoding: quoted-printable
+X-6b629377: 2
+X-77F55803: 22DDBBE55E13BF3BB78C6AD6BB63D6B76B090B1A966371BE43645C5B165E7DE1C8E50670C49ACEDECA323FD0D01629341E13962C942EC85E
+X-7FA49CB5: A9FCD207E66530D8A18204E546F3947CD2DCF9CF1F528DBCD7494F64F9BEE8B42EF20D2F80756B5F26E476CCD9869EB15136D004FC00FE2978DA827A17800CE7A7CF3FE7142963E7CFB931F3CA250F24B96F9B32054F196866665D3BE1BB5DA08AA50765F79006372C338EE517BE482194FF8871F1180B996F1F0D16268E5697FBA10D04E2D63E2B7851B713C320A93552D31B9D28593E51BFAA6A731AC295225571747095F342E80B8ADF238913687CB287FD4696A6DC2F5F5C1EE8F4F765FCCCCEEC0986DC4DB1BFD28B28ED4578732EF20D2F80756B5F40A5AABA2AD37119BCF491FFA38154B6D5E8D9A59859A8B60E6F8C16B49E17FCBCF491FFA38154B6B5C8C57E37DE458B1CF78AEA6EAC03FC725E5C173C3A84C317B107DEF921CE7938D433D53B717345BA69B7DF0B3EA92AC6CDE5D1141D2B1CF778C271FF8D75DBE6C32A895921858139998010A0E7CE019FA2833FD35BB23D9E625A9149C048EE9ECD01F8117BC8BEA471835C12D1D9774AD6D5ED66289B524E70A05D1297E1BBF6B57BC7E64490611E7FA7ABCAF51C92A417C69337E82CC2CC7F00164DA146DA6F5DAA56C3B73B239DAA53EE0834AAEE
+X-C8649E89: 026F6BF5981F68DC92B309E0A58203DA290BB2AE8FE11A903B37E9DBC8D1A497839BD6F0F71F6232
+X-Mailru-Dmarc-Auth: dmarc=fail header.from=noreply@mpi.sarenergo.ru
+X-Mailru-Noreply: yes
+X-Mras: OK
+X-Spam: undefined
+Authentication-Results: mxs.mail.ru; spf=pass (mx315.i.mail.ru: domain of devinosender.com designates 185.205.67.71 as permitted sender) smtp.mailfrom=mail-12225716@devinosender.com smtp.helo=host.67.71.devinosender.com; dmarc=fail header.from=noreply@mpi.sarenergo.ru
+X-Mailru-Intl-Transport: d,2e9b2e7
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"600">
+	<tbody>
+		<tr>
+			<td>
+			<div style=3D"line-height: 0;"><img alt=3D"=D0=9B=D0=BE=D0=B3=D0=BE=
+=D1=82=D0=B8=D0=BF " src=3D"http://www.saratovenergo.ru/upload/images/=
+CPody.jpg"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse: collapse; padding: 0px;" width=3D"6=
+00">
+				<tbody>
+					<tr>
+						<td>
+						<pre wrap=3D"">
+<span style=3D"font-family:times new roman,times,serif;">=D0=A3=D0=B2=D0=
+=B0=D0=B6=D0=B0=D0=B5=D0=BC=D1=8B=D0=B9 =D0=B0=D0=B1=D0=BE=D0=BD=D0=B5=
+=D0=BD=D1=82!
+</span><span style=3D"font-family:times new roman,times,serif;">
+  =D0=92=D0=B0=D0=BC =D0=BD=D0=B0=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=
+=BD =D1=81=D1=87=D0=B5=D1=82 =D0=BD=D0=B0 =D0=BE=D0=BF=D0=BB=D0=B0=D1=82=
+=D1=83 =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D1=8D=D0=BD=D0=B5=D1=
+=80=D0=B3=D0=B8=D0=B8 =D0=BF=D0=BE =D0=BB=D0=B8=D1=86=D0=B5=D0=B2=D0=BE=
+=D0=BC=D1=83 =D1=81=D1=87=D1=91=D1=82=D1=83 <strong>9526502623</strong> =
+=D0=B7=D0=B0 <strong>=D0=B0=D0=B2=D0=B3=D1=83=D1=81=D1=82 2019</strong=
+>.
+=D0=94=D0=BB=D1=8F =D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8 =D0=
+=B4=D0=BE=D0=BA=D1=83=D0=BC=D0=B5=D0=BD=D1=82=D0=B0 =D0=BF=D0=B5=D1=80=
+=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE <strong><a href=3D"=
+http://invoice.saratovenergo.ru/invoice/get?account=3D9526502623&hash=3D=
+a34f09bbae5f46cd17496f435a250cd3e0a83dd493ae9c5a71507e3f56c2964b">=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5:</a></strong></span></pr=
+e>
+
+						<pre wrap=3D"">
+<span style=3D"font-family:times new roman,times,serif;">=D0=94=D0=BB=D1=
+=8F =D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B0 =D0=BF=D0=BB=
+=D0=B0=D1=82=D0=B5=D0=B6=D0=BD=D0=BE=D0=B3=D0=BE =D0=B4=D0=BE=D0=BA=D1=
+=83=D0=BC=D0=B5=D0=BD=D1=82=D0=B0, =D1=83 =D0=B2=D0=B0=D1=81 =D0=B4=D0=
+=BE=D0=BB=D0=B6=D0=BD=D0=B0 =D0=B1=D1=8B=D1=82=D1=8C =D1=83=D1=81=D1=82=
+=D0=B0=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B0 =D0=BF=D1=80=D0=BE=D0=
+=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=B0 =D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=BE=
+=D1=82=D1=80=D0=B0 =D1=84=D0=B0=D0=B9=D0=BB=D0=BE=D0=B2 =D1=84=D0=BE=D1=
+=80=D0=BC=D0=B0=D1=82=D0=B0 .pdf </span></pre>
+
+						<pre wrap=3D"">
+<span style=3D"font-family: &quot;times new roman&quot;, times, serif;=
+">=D0=94=D0=B0=D0=BD=D0=BD=D0=BE=D0=B5 =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =D1=81=D0=BE=D0=B7=D0=B4=
+=D0=B0=D0=BD=D0=BE =D0=B0=D0=B2=D1=82=D0=BE=D0=BC=D0=B0=D1=82=D0=B8=D1=
+=87=D0=B5=D1=81=D0=BA=D0=B8, =D0=BE=D1=82=D0=B2=D0=B5=D1=87=D0=B0=D1=82=
+=D1=8C =D0=BD=D0=B0 =D0=BD=D0=B5=D0=B3=D0=BE =D0=BD=D0=B5 =D0=BD=D1=83=
+=D0=B6=D0=BD=D0=BE.</span></pre>
+
+						<p><a href=3D"http://click.email4customers.com/Link?messageId=3D=
+MiSR1FbMMyH&linkId=3D246d9d706c2f4895a495cd99e28180be&args=3Dhttps%3a%=
+2f%2fwww.saratovenergo.ru%2fuslugi%2f"><img alt=3D"" src=3D"http://cdn=
+.st.email4customers.com/lk/7709a209-d9ad-48f8-9bce-fd2d9fbee035_uslugi=
+.jpg"></a></p>
+
+						<p><span style=3D"color:#FF0000;"><span style=3D"font-family:tim=
+es new roman,times,serif;"><strong>=D0=92=D0=BD=D0=B8=D0=BC=D0=B0=D0=BD=
+=D0=B8=D0=B5!</strong> =D0=92 =D1=81=D0=BB=D1=83=D1=87=D0=B0=D0=B5 =D0=
+=BE=D1=82=D0=BA=D0=B0=D0=B7=D0=B0 =D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=
+=D1=8B=D0=BB=D0=BA=D0=B8, =D0=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=BD=D0=
+=B0=D1=8F =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=BA=D0=B0 =D0=BD=D0=B0=
+ =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D1=83=D1=8E =D1=
+=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 =D0=9F=D0=94 =D0=B2=D0=BE=
+=D0=B7=D0=BC=D0=BE=D0=B6=D0=BD=D0=B0 =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=
+=BE =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=
+=D0=BD=D0=B8=D1=8F =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B5=D0=BD=D0=BD=D0=
+=BE=D0=B3=D0=BE =D1=81=D0=BE=D0=B3=D0=BB=D0=B0=D1=81=D0=B8=D1=8F =D0=B0=
+=D0=B1=D0=BE=D0=BD=D0=B5=D0=BD=D1=82=D0=B0!</span></span></p>
+
+						<div><span style=3D"font-family: &quot;times new roman&quot;, ti=
+mes, serif;">=D0=9F=D0=90=D0=9E &quot;=D0=A1=D0=B0=D1=80=D0=B0=D1=82=D0=
+=BE=D0=B2=D1=8D=D0=BD=D0=B5=D1=80=D0=B3=D0=BE&quot;&nbsp;</span></div>
+
+						<pre wrap=3D"">
+<span style=3D"font-family:times new roman,times,serif;">=D0=B0=D0=B4=D1=
+=80=D0=B5=D1=81: 410005, =D0=B3.=D0=A1=D0=B0=D1=80=D0=B0=D1=82=D0=BE=D0=
+=B2, =D1=83=D0=BB. =D0=B8=D0=BC =D0=A0=D0=B0=D1=85=D0=BE=D0=B2=D0=B0 =D0=
+=92.=D0=93.,=D0=B4.181=20
+=D1=82=D0=B5=D0=BB.: 8 (8452) 69-45-45=20
+=D1=81=D0=B0=D0=B9=D1=82: http://www.saratovenergo.ru/</span></pre>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<pre wrap=3D"">
+&nbsp;</pre>
+
+<pre wrap=3D"">
+<span style=3D"color: #808080;"><span style=3D"font-size: 10px;"><span=
+ style=3D"font-family: arial, helvetica, sans-serif;">=D0=95=D1=81=D0=BB=
+=D0=B8 =D0=92=D1=8B =D0=BD=D0=B5 =D0=B2=D0=B8=D0=B4=D0=B8=D1=82=D0=B5 =
+=D0=B4=D0=B0=D0=BD=D0=BD=D0=BE=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=
+=BE, =D0=BF=D0=B5=D1=80=D0=B5=D0=B9=D0=B4=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=
+ <a href=3D"http://click.email4customers.com/WebVersion?messageId=3D=
+MiSR1FbMMyH">=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B5</a> =D1=87=D1=82=D0=BE=
+=D0=B1=D1=8B =D0=BF=D1=80=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=
+=82=D1=8C =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE =D0=B2 =D0=B1=D1=80=D0=B0=
+=D1=83=D0=B7=D0=B5=D1=80=D0=B5.</span></span></span>
+<span style=3D"color: #808080;"><span style=3D"font-size: 10px;"><span=
+ style=3D"font-family: arial, helvetica, sans-serif;">=D0=95=D1=81=D0=BB=
+=D0=B8 =D0=B2=D1=8B =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B5 =D0=BD=D0=B5 =
+=D1=85=D0=BE=D1=82=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=
+=B0=D1=82=D1=8C =D1=8D=D1=82=D1=83 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=
+=D0=BA=D1=83, =D1=82=D0=BE =D0=BD=D0=B0=D0=B6=D0=BC=D0=B8=D1=82=D0=B5 =
+<a href=3D"http://click.email4customers.com/Unsubscribe?messageId=3D=
+MiSR1FbMMyH">=D0=BE=D1=82=D0=BF=D0=B8=D1=81=D0=B0=D1=82=D1=8C=D1=81=D1=8F=
+ =D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a>.</s=
+pan></span></span>
+<span id=3D"subscriberReminder" style=3D"color: #ff0000;"><span style=3D=
+"font-size: 10px;"><span style=3D"font-family: arial, helvetica, sans-=
+serif;">=D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D0=BB=D0=B8 =
+=D1=8D=D1=82=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=
+=B5, =D0=BF=D0=BE=D1=82=D0=BE=D0=BC=D1=83 =D1=87=D1=82=D0=BE =D0=BF=D0=
+=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=BB=D0=B8=D1=81=D1=8C =D0=BD=D0=B0=
+ =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=83 =D0=9F=D0=90=D0=9E &=
+quot;=D0=A1=D0=B0=D1=80=D0=B0=D1=82=D0=BE=D0=B2=D1=8D=D0=BD=D0=B5=D1=80=
+=D0=B3=D0=BE&quot;
+</span></span></span></pre>
+<img src=3D"http://click.email4customers.com/Track?messageId=3D=
+MiSR1FbMMyH&args=3D0372e650b44645ca9682ce43bc300809" height=3D"1" width=3D"1"=
+></body>
+</html>

@@ -1,0 +1,79 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
+
+
+
+// hardcode dir of inbox mails
+const inbox = "mail/inbox"
+
+
+func main()  {
+	fmt.Println(">> Фильтр запущен <<")
+
+	// Смотрим наличие файлов во входящих
+	files, err := ioutil.ReadDir(inbox)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// если есть файлы в рассматриваемой выше директории, то...
+	if len(files) > 0 {
+
+		a := Address{From:"", To:""}
+		x := XHeaders{"", "","","","",""}
+		h := Headers{"","","","","","","", x}
+		b := Body{""}
+		m := Mail_{Address:a, Headers:h, Body:b} // создаем Менеджер писем
+
+		// Для каждого отдельного файла из списка этих файлов
+		for _, file := range files {
+			fmt.Println(file.Name()) // Выводим все имена файлов
+			filter(file, &m)
+		}
+
+		fmt.Println("Все письма отсортированы")
+
+	} else {
+		fmt.Println("Нет новых писем")
+	}
+}
+
+func checker(mail Mail_)  {
+
+}
+
+
+//func checker(info os.FileInfo)  {
+//	data, err := ioutil.ReadFile(inbox + "/" + info.Name())
+//	if err != nil {
+//		fmt.Println(err)
+//		return
+//	}
+//
+//	fmt.Println("Следующее содержание письма:")
+//	//fmt.Println(string(data))
+//	_ := string(data) // заглушка. для того, чтобы не ругался на использование data
+//
+//	return
+//}
+
+
+func filter(info os.FileInfo, m *Mail_){
+	fmt.Println("Найдено новое письмо:", info.Name())
+
+	err := m.Parser(info) // Распределяем данные по структуре письма
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	m.Checker()
+
+	return
+}

@@ -1,0 +1,270 @@
+Delivered-To: dagon_bleach@mail.ru
+Return-path: <info@sharewood.pro>
+Received: by smtp43.i.mail.ru with esmtpa (envelope-from <info@sharewood.pro>)
+	id 1iY7SP-0005wh-Px
+	for dagon_bleach@mail.ru; Fri, 22 Nov 2019 14:50:38 +0300
+Message-ID: <3c773e09407fbedc204f62a5bb360384@sharewood.pro>
+Date: Fri, 22 Nov 2019 11:50:36 +0000
+Subject: =?utf-8?Q?=D0=A3=D0=B8=D0=BB=D0=BB_=D0=A1=D0=BA=D0=B0?=
+ =?utf-8?Q?=D1=80=D0=BB=D0=B5=D1=82_=D0=BD=D0=B0=D1=87?=
+ =?utf-8?Q?=D0=B0=D0=BB=28=D0=B0=29_=D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8?=
+ =?utf-8?Q?=D1=81=D0=BA=D1=83_=D1=81_=D0=92=D0=B0=D0=BC=D0=B8=3A_?=
+ =?utf-8?Q?=22=D0=94=D0=BE=D0=B1=D1=80=D0=BE_=D0=BF?=
+ =?utf-8?Q?=D0=BE=D0=B6=D0=B0=D0=BB=D0=BE=D0=B2=D0=B0=D1=82=D1=8C_=D0=B2_?=
+ =?utf-8?Q?=D0=A8=D0=B5=D1=80=D0=B2=D1=83=D0=B4=D1=81=D0=BA?=
+ =?utf-8?Q?=D0=BE=D0=B5_=D0=B1=D1=80=D0=B0=D1=82=D1=81=D1=82=D0=B2=D0=BE!?=
+ =?utf-8?Q?=22?=
+From: "info@sharewood.pro" <info@sharewood.pro>
+To: =?utf-8?Q?=D0=A1=D0=B5=D1=80=D0=B3=D0=B5=D0=B9888?=
+ <dagon_bleach@mail.ru>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1574423436_0a35ceb3aabd4369e7a583012517fea1_=_"
+X-To-Validate: 0900a739+dagon_bleach@mail.ru
+Authentication-Results: smtp43.i.mail.ru; auth=pass smtp.auth=info@sharewood.pro smtp.mailfrom=info@sharewood.pro
+X-77F55803: 257C4F86AB09C89C5A78504BD2AC2941988784FC6C4AE31FEE6917CD0AA4A55138D14F5AD11D4E7406CB35DC9F86F684212AC1FB7AB07994
+X-7FA49CB5: FF5795518A3D127A4AD6D5ED66289B5278DA827A17800CE7B9115C1E69829868EA1F7E6F0F101C67BD4B6F7A4D31EC0BCC500DACC3FED6E28638F802B75D45FF8AA50765F790063788758EA7442DD2858638F802B75D45FF5571747095F342E8C7A0BC55FA0FE5FCE755ACCEE1862EFE078DFD9F81E65DA8408968C59E70EB46389733CBF5DBD5E913377AFFFEAFD269A417C69337E82CC2CC7F00164DA146DAFE8445B8C89999725571747095F342E8C26CFBAC0749D213D2E47CDBA5A9658359CC434672EE6371117882F4460429728AD0CFFFB425014E40A5AABA2AD371193AA81AA40904B5D9A18204E546F3947CAD7102AF51AFB197BA3038C0950A5D36C8A9BA7A39EFB766D187B4DA314F1B55BA3038C0950A5D36D5E8D9A59859A8B68A6A9CDE6F7FFFCB76E601842F6C81A1F004C90652538430875EEBC0F5F22B322DBA43225CD8A89F9FFED5BD9FB4175564F7E9FEC8AF2544E316EBD57BEBA92443847C11F186F3C5E7DDDDC251EA7DABCC89B49CDF41148F53FDB0A1CE3EC88B3B503F486389A921A5CC5B56E945C8DA
+X-Mailru-Sender: C3E4F2F0ED37BCFB6BE1ECEED3D766F2547F5459315DD12B38D14F5AD11D4E74BA0848438379BFCED43886FE9E35B77F78274A4A9E9E44FD1D97B3D23F2C804524A91BFAC044FE5E6F10C0EA5915B1ED3453F38A29522196
+X-Mras: OK
+X-Mailru-Intl-Transport: d,03c87f6
+
+
+--_=_swift_v4_1574423436_0a35ceb3aabd4369e7a583012517fea1_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=D0=A3=D0=B8=D0=BB=D0=BB =D0=A1=D0=BA=D0=B0=D1=80=D0=BB=D0=B5=D1=82 =D0=
+=BD=D0=B0=D1=87=D0=B0=D0=BB(=D0=B0) =D1=81 =D0=92=D0=B0=D0=BC=D0=B8 =D0=
+=BD=D0=BE=D0=B2=D1=83=D1=8E =D0=BB=D0=B8=D1=87=D0=BD=D1=83=D1=8E =D0=BF=
+=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=D0=BA=D1=83 =D0=BD=D0=B0 =D1=84=D0=
+=BE=D1=80=D1=83=D0=BC=D0=B5 SHAREWOOD.PRO - =D0=9F=D0=BB=D0=B0=D1=82=D0=
+=BD=D0=BE=D0=B5 =D1=82=D0=B5=D0=BF=D0=B5=D1=80=D1=8C =D0=B1=D0=B5=D1=81=
+=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=BE! | =D0=A1=D0=BA=D0=B0=D1=87=D0=B0=
+=D1=82=D1=8C =D0=BA=D1=83=D1=80=D1=81=D1=8B, =D0=B2=D0=B8=D0=B4=D0=B5=D0=
+=BE=D1=83=D1=80=D0=BE=D0=BA=D0=B8, =D0=BC=D0=B0=D0=BD=D1=83=D0=B0=D0=BB=
+=D1=8B, =D0=BE=D0=B1=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D1=81=D0=BE =
+=D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D1=87=D0=B8=D0=BA=D0=B0 (https://sharewood.p=
+ro/).
+
+****** =D0=94=D0=BE=D0=B1=D1=80=D0=BE =D0=BF=D0=BE=D0=B6=D0=
+=B0=D0=BB=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=B2 =D0=A8=D0=B5=D1=80=D0=B2=
+=D1=83=D0=B4=D1=81=D0=BA=D0=BE=D0=B5 =D0=B1=D1=80=D0=B0=D1=82=D1=81=D1=
+=82=D0=B2=D0=BE! (https://sharewood.pro/conversations/%D0%94%D0%BE%D0%B1%D1=
+%80%D0%BE-%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D0%=
+B2-%D0%A8%D0%B5%D1%80%D0%B2%D1%83%D0%B4%D1%81%D0%BA%D0%BE%D0%B5-%D0%B1%D1%8=
+0%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE.159129/unread) ******
+
+=D0=9F=
+=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C =D1=8D=D1=82=D1=
+=83 =D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=D0=BA=D1=83 (https://sharewo=
+od.pro/conversations/%D0%94%D0%BE%D0%B1%D1%80%D0%BE-%D0%BF%D0%BE%D0%B6%D0%B=
+0%D0%BB%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D0%B2-%D0%A8%D0%B5%D1%80%D0%B2%D1%83=
+%D0%B4%D1%81%D0%BA%D0%BE%D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%81%D1%82%D0%B2%D=
+0%BE.159129/unread) - =D0=9F=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=
+=D1=82=D1=8C =D0=B2=D1=81=D0=B5 =D0=92=D0=B0=D1=88=D0=B8 =D0=BF=D0=B5=D1=
+=80=D0=B5=D0=BF=D0=B8=D1=81=D0=BA=D0=B8 (https://sharewood.pro/conversation=
+s/)
+
+=D0=AD=D1=82=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=
+=D0=B8=D0=B5 =D0=B1=D1=8B=D0=BB=D0=BE =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=
+=B2=D0=BB=D0=B5=D0=BD=D0=BE =D0=92=D0=B0=D0=BC, =D1=82=D0=B0=D0=BA =D0=
+=BA=D0=B0=D0=BA =D0=B2 =D0=92=D0=B0=D1=88=D0=B8=D1=85 =D0=BD=D0=B0=D1=81=
+=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B0=D1=85 =D1=83=D0=BA=D0=B0=D0=B7=D0=
+=B0=D0=BD=D0=BE, =D1=87=D1=82=D0=BE =D0=92=D1=8B =D0=B6=D0=B5=D0=BB=D0=
+=B0=D0=B5=D1=82=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =
+=D1=83=D0=B2=D0=B5=D0=B4=D0=BE=D0=BC=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =D0=
+=BF=D1=80=D0=B8 =D0=BF=D0=BE=D1=8F=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B8 =
+=D0=BD=D0=BE=D0=B2=D0=BE=D0=B3=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=
+=B5=D0=BD=D0=B8=D1=8F =D0=B2 =D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=
+=D0=BA=D0=B5. =D0=9F=D0=B5=D1=80=D0=B5=D1=81=D1=82=D0=B0=D1=82=D1=8C =D0=
+=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D1=8D=D1=82=D0=B8 =D1=8D=
+=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D1=8B=D0=B5 =D0=BF=D0=
+=B8=D1=81=D1=8C=D0=BC=D0=B0 (https://sharewood.pro/email-stop/81393/convers=
+ation?c=3D820f2e5e9f7c2611fed3c07bfc90cd8b).
+
+-------------------------=
+----
+
+=D0=9F=D0=BE=D1=81=D0=B5=D1=82=D0=B8=D1=82=D1=8C SHAREWOOD.PRO - =
+=D0=9F=D0=BB=D0=B0=D1=82=D0=BD=D0=BE=D0=B5 =D1=82=D0=B5=D0=BF=D0=B5=D1=
+=80=D1=8C =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=BE! | =D0=
+=A1=D0=BA=D0=B0=D1=87=D0=B0=D1=82=D1=8C =D0=BA=D1=83=D1=80=D1=81=D1=8B, =
+=D0=B2=D0=B8=D0=B4=D0=B5=D0=BE=D1=83=D1=80=D0=BE=D0=BA=D0=B8, =D0=BC=D0=
+=B0=D0=BD=D1=83=D0=B0=D0=BB=D1=8B, =D0=BE=D0=B1=D1=83=D1=87=D0=B5=D0=BD=
+=D0=B8=D1=8F =D1=81=D0=BE =D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D1=87=D0=B8=D0=
+=BA=D0=B0: https://sharewood.pro/
+
+--_=_swift_v4_1574423436_0a35ceb3aabd4369e7a583012517fea1_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"ru-RU" dir=3D"LTR">
+<head>
+<meta http-e=
+quiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<base href=
+=3D"https://sharewood.pro/">
+<meta name=3D"viewport" content=3D"width=3Dd=
+evice-width, initial-scale=3D1">
+<meta http-equiv=3D"X-UA-Compatible" con=
+tent=3D"IE=3Dedge">
+<meta name=3D"format-detection" content=3D"telephone=
+=3Dno">
+<title>=D0=A3=D0=B8=D0=BB=D0=BB =D0=A1=D0=BA=D0=B0=D1=80=D0=BB=
+=D0=B5=D1=82 =D0=BD=D0=B0=D1=87=D0=B0=D0=BB(=D0=B0) =D0=BF=D0=B5=D1=80=
+=D0=B5=D0=BF=D0=B8=D1=81=D0=BA=D1=83 =D1=81 =D0=92=D0=B0=D0=BC=D0=B8: "=
+=D0=94=D0=BE=D0=B1=D1=80=D0=BE =D0=BF=D0=BE=D0=B6=D0=B0=D0=BB=D0=BE=D0=
+=B2=D0=B0=D1=82=D1=8C =D0=B2 =D0=A8=D0=B5=D1=80=D0=B2=D1=83=D0=B4=D1=81=
+=D0=BA=D0=BE=D0=B5 =D0=B1=D1=80=D0=B0=D1=82=D1=81=D1=82=D0=B2=D0=BE!"</titl=
+e>
+</head>
+<body dir=3D"LTR" leftmargin=3D"0" topmargin=3D"0" marginwid=
+th=3D"0" marginheight=3D"0" style=3D"margin: 0; padding: 0; word-wrap: brea=
+k-word; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; backgro=
+und-color: #ececec; font-size: 14px; font-family: 'Segoe UI','Helvetica Neu=
+e',Helvetica,Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-s=
+erif; line-height: 1.4; color: #141414;">
+
+<table id=3D"bodyTable" bord=
+er=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+border-collapse: collapse; height: 100% !important; width: 100% !important;=
+ margin: 0; padding: 0; background-color: #ececec;"><tr>
+<td align=3D"cen=
+ter" valign=3D"top" id=3D"bodyTableContainer" style=3D"border-collapse: col=
+lapse; background-color: #ececec;">
+=09=09<table border=3D"0" width=3D"60=
+0" cellpadding=3D"0" cellspacing=3D"0" class=3D"container" dir=3D"LTR" styl=
+e=3D"border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; borde=
+r-collapse: collapse; width: 100%; max-width: 600px;">
+<tr>
+<td class=
+=3D"header" align=3D"center" valign=3D"top" style=3D"border-collapse: colla=
+pse; color: #546e7a; padding: 6px 10px; border-top-left-radius: 4px; border=
+-top-right-radius: 4px; font-family: 'Segoe UI','Helvetica Neue',Helvetica,=
+Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-serif; font-si=
+ze: 24px; line-height: 1.4;">
+=09=09=09=09<a href=3D"https://sharewood.pr=
+o/" style=3D"color: #546e7a; text-decoration: none;">SHAREWOOD.PRO - =D0=
+=9F=D0=BB=D0=B0=D1=82=D0=BD=D0=BE=D0=B5 =D1=82=D0=B5=D0=BF=D0=B5=D1=80=
+=D1=8C =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=BE! | =D0=A1=
+=D0=BA=D0=B0=D1=87=D0=B0=D1=82=D1=8C =D0=BA=D1=83=D1=80=D1=81=D1=8B, =D0=
+=B2=D0=B8=D0=B4=D0=B5=D0=BE=D1=83=D1=80=D0=BE=D0=BA=D0=B8, =D0=BC=D0=B0=
+=D0=BD=D1=83=D0=B0=D0=BB=D1=8B, =D0=BE=D0=B1=D1=83=D1=87=D0=B5=D0=BD=D0=
+=B8=D1=8F =D1=81=D0=BE =D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D1=87=D0=B8=D0=BA=
+=D0=B0</a>
+=09=09=09</td>
+=09=09</tr>
+<tr>
+<td class=3D"content" al=
+ign=3D"left" valign=3D"top" style=3D"border-collapse: collapse; background-=
+color: #fefefe; border-radius: 2px; color: #141414; padding: 10px; font-siz=
+e: 14px; font-family: 'Segoe UI','Helvetica Neue',Helvetica,Roboto,Oxygen,U=
+buntu,Cantarell,'Fira Sans','Droid Sans',sans-serif; line-height: 1.4;">
+=
+
+<p style=3D"margin-top: 0;">=D0=A3=D0=B8=D0=BB=D0=BB =D0=A1=D0=BA=D0=
+=B0=D1=80=D0=BB=D0=B5=D1=82 =D0=BD=D0=B0=D1=87=D0=B0=D0=BB(=D0=B0) =D1=
+=81 =D0=92=D0=B0=D0=BC=D0=B8 =D0=BD=D0=BE=D0=B2=D1=83=D1=8E =D0=BB=D0=B8=
+=D1=87=D0=BD=D1=83=D1=8E =D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=D0=
+=BA=D1=83 =D0=BD=D0=B0 =D1=84=D0=BE=D1=80=D1=83=D0=BC=D0=B5 <a href=3D"http=
+s://sharewood.pro/" style=3D"color: #202020; text-decoration: none;">SHAREW=
+OOD.PRO - =D0=9F=D0=BB=D0=B0=D1=82=D0=BD=D0=BE=D0=B5 =D1=82=D0=B5=D0=BF=
+=D0=B5=D1=80=D1=8C =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=
+=BE! | =D0=A1=D0=BA=D0=B0=D1=87=D0=B0=D1=82=D1=8C =D0=BA=D1=83=D1=80=D1=
+=81=D1=8B, =D0=B2=D0=B8=D0=B4=D0=B5=D0=BE=D1=83=D1=80=D0=BE=D0=BA=D0=B8, =
+=D0=BC=D0=B0=D0=BD=D1=83=D0=B0=D0=BB=D1=8B, =D0=BE=D0=B1=D1=83=D1=87=D0=
+=B5=D0=BD=D0=B8=D1=8F =D1=81=D0=BE =D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D1=87=
+=D0=B8=D0=BA=D0=B0</a>.</p>
+
+<h2 style=3D"font-size: 24px; font-weight:=
+ normal; margin: 10px 0; padding: 0;"><a href=3D"https://sharewood.pro/conv=
+ersations/%D0%94%D0%BE%D0%B1%D1%80%D0%BE-%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%=
+BE%D0%B2%D0%B0%D1%82%D1%8C-%D0%B2-%D0%A8%D0%B5%D1%80%D0%B2%D1%83%D0%B4%D1%8=
+1%D0%BA%D0%BE%D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE.159129=
+/unread" style=3D"color: #202020; text-decoration: none;">=D0=94=D0=BE=
+=D0=B1=D1=80=D0=BE =D0=BF=D0=BE=D0=B6=D0=B0=D0=BB=D0=BE=D0=B2=D0=B0=D1=
+=82=D1=8C =D0=B2 =D0=A8=D0=B5=D1=80=D0=B2=D1=83=D0=B4=D1=81=D0=BA=D0=BE=
+=D0=B5 =D0=B1=D1=80=D0=B0=D1=82=D1=81=D1=82=D0=B2=D0=BE!</a></h2>
+
+
+=
+
+<table cellpadding=3D"10" cellspacing=3D"0" border=3D"0" width=3D"100%" =
+class=3D"linkBar" style=3D"border-spacing: 0; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; border-collapse: collapse; padding: 6px; background-color:=
+ #f5f5f5; border-top: 1px solid #d8d8d8;"><tr>
+<td style=3D"border-collap=
+se: collapse;">
+=09=09<a href=3D"https://sharewood.pro/conversations/%D0%=
+94%D0%BE%D0%B1%D1%80%D0%BE-%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%BE%D0%B2%D0%B0=
+%D1%82%D1%8C-%D0%B2-%D0%A8%D0%B5%D1%80%D0%B2%D1%83%D0%B4%D1%81%D0%BA%D0%BE%=
+D0%B5-%D0%B1%D1%80%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE.159129/unread" class=
+=3D"button" style=3D"color: #edf6fd; text-decoration: none; display: inline=
+-block; padding: 5px 10px; background-color: #253242; border: none; border-=
+radius: 4px; font-size: 13px;">=D0=9F=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=
+=80=D0=B5=D1=82=D1=8C =D1=8D=D1=82=D1=83 =D0=BF=D0=B5=D1=80=D0=B5=D0=BF=
+=D0=B8=D1=81=D0=BA=D1=83</a>
+=09</td>
+=09<td align=3D"right" style=3D"b=
+order-collapse: collapse;">
+=09=09<a href=3D"https://sharewood.pro/conver=
+sations/" class=3D"buttonFake" style=3D"color: #202020; text-decoration: no=
+ne; display: inline-block; padding: 5px 10px; font-size: 13px;">=D0=9F=
+=D0=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C =D0=B2=D1=81=D0=
+=B5 =D0=92=D0=B0=D1=88=D0=B8 =D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=
+=D0=BA=D0=B8</a>
+=09</td>
+</tr></table>
+<p class=3D"minorText" style=
+=3D"font-size: 13px; color: #8c8c8c; margin-bottom: 0;">=D0=AD=D1=82=D0=
+=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=8B=
+=D0=BB=D0=BE =D0=BE=D1=82=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=
+=BE =D0=92=D0=B0=D0=BC, =D1=82=D0=B0=D0=BA =D0=BA=D0=B0=D0=BA =D0=B2 =D0=
+=92=D0=B0=D1=88=D0=B8=D1=85 =D0=BD=D0=B0=D1=81=D1=82=D1=80=D0=BE=D0=B9=
+=D0=BA=D0=B0=D1=85 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BE, =D1=87=D1=
+=82=D0=BE =D0=92=D1=8B =D0=B6=D0=B5=D0=BB=D0=B0=D0=B5=D1=82=D0=B5 =D0=BF=
+=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D1=83=D0=B2=D0=B5=D0=B4=D0=
+=BE=D0=BC=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=B8 =D0=BF=D0=BE=
+=D1=8F=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B8 =D0=BD=D0=BE=D0=B2=D0=BE=D0=
+=B3=D0=BE =D1=81=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8F =D0=B2 =
+=D0=BF=D0=B5=D1=80=D0=B5=D0=BF=D0=B8=D1=81=D0=BA=D0=B5. <a href=3D"https://=
+sharewood.pro/email-stop/81393/conversation?c=3D820f2e5e9f7c2611fed3c07bfc9=
+0cd8b" style=3D"color: #8c8c8c; text-decoration: underline;">=D0=9F=D0=
+=B5=D1=80=D0=B5=D1=81=D1=82=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=
+=D1=87=D0=B0=D1=82=D1=8C =D1=8D=D1=82=D0=B8 =D1=8D=D0=BB=D0=B5=D0=BA=D1=
+=82=D1=80=D0=BE=D0=BD=D0=BD=D1=8B=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=
+=D0=B0</a>.</p>
+
+=09=09=09</td>
+=09=09</tr>
+<tr>
+<td class=3D"foo=
+ter" align=3D"center" valign=3D"top" style=3D"border-collapse: collapse; pa=
+dding: 6px 10px; text-align: center; color: #8c8c8c; font-size: 13px; font-=
+family: 'Segoe UI','Helvetica Neue',Helvetica,Roboto,Oxygen,Ubuntu,Cantarel=
+l,'Fira Sans','Droid Sans',sans-serif; line-height: 1.4;">
+=09=09=09=09<d=
+iv><a href=3D"https://sharewood.pro/" style=3D"color: #8c8c8c; text-decorat=
+ion: underline;">=D0=9F=D0=BE=D1=81=D0=B5=D1=82=D0=B8=D1=82=D1=8C SHAREWOOD=
+.PRO - =D0=9F=D0=BB=D0=B0=D1=82=D0=BD=D0=BE=D0=B5 =D1=82=D0=B5=D0=BF=D0=
+=B5=D1=80=D1=8C =D0=B1=D0=B5=D1=81=D0=BF=D0=BB=D0=B0=D1=82=D0=BD=D0=BE! | =
+=D0=A1=D0=BA=D0=B0=D1=87=D0=B0=D1=82=D1=8C =D0=BA=D1=83=D1=80=D1=81=D1=
+=8B, =D0=B2=D0=B8=D0=B4=D0=B5=D0=BE=D1=83=D1=80=D0=BE=D0=BA=D0=B8, =D0=
+=BC=D0=B0=D0=BD=D1=83=D0=B0=D0=BB=D1=8B, =D0=BE=D0=B1=D1=83=D1=87=D0=B5=
+=D0=BD=D0=B8=D1=8F =D1=81=D0=BE =D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D1=87=D0=
+=B8=D0=BA=D0=B0</a></div>
+
+=09=09=09=09
+=09=09=09</td>
+=09=09</tr>=
+
+</table>
+</td>
+</tr></table>
+</body>
+</html>
+
+--_=_swift_v4_1574423436_0a35ceb3aabd4369e7a583012517fea1_=_--
+
