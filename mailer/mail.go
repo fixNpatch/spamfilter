@@ -1,6 +1,7 @@
 package mailer
 
 import (
+	b64 "encoding/base64"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -53,6 +54,32 @@ type Body struct {
 	string
 }
 
+
+func returnValue(input string) (string, error) {
+	// основанно на следующем знании: https://dmorgan.info/posts/encoded-word-syntax/
+
+	// python version
+	// encoded_word_regex = r'=\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}='
+	// charset, encoding, encoded_text = re.match(encoded_word_regex, encoded_words).groups()
+
+
+	// регулярное выражение для определения кодировки в поле письма
+	regular := regexp.MustCompile(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`)
+	splitted := regular.FindStringSubmatch(input) // выделение частей
+	charst, encodng, encodtxt := splitted[1], splitted[2], splitted[3]
+
+	// проверка (можно удалить вывод)
+	fmt.Println(charst, encodng, encodtxt)
+
+	// декодирование по выбранной кодировке (пока сделано только для base64)
+	decoded, err := b64.StdEncoding.DecodeString("0KDQsNGB0YLQvtGA0LbQtdC90LjQtSDQv9C+0LTQv9C40YE=")
+	if err != nil {
+		fmt.Println("Error::Bad converting::Base64 => UTF-8")
+		return "", err
+	}
+	return string(decoded), nil
+}
+
 func readfile(filename string) string {
 	data, err := ioutil.ReadFile(Inbox + "/" + filename)
 	if err != nil { // если что-то пошло не так, то сохраняем ошибку и возвращаем пустую строку
@@ -72,12 +99,10 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		return fmt.Errorf("Error:Cant read file::Empty input")
 	}
 
-	// formating
-
-	//regexp для заголовков ^[a-zA-Z].[a-zA-Z-0-9]+:
+	// regexp для заголовков ^[a-zA-Z].[a-zA-Z-0-9]+:
 
 	rawLineArray := strings.Split(strings.TrimSuffix(strings.TrimSuffix(readed, "\n"), "\r"), "\n")
-	//rawLineArray := strings.Split(readed, "\n") // разбиваем считанную из файла информацию на строки
+	// разбиваем считанную из файла информацию на строки
 	// получаем "грязные" строки, то есть некоторые заголовки являются многострочными.
 	// Надо сделать 1 заголовок = 1 строка
 
@@ -140,10 +165,8 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		}
 	}
 
-
-	//re := regexp.MustCompile(`To`)
-	//fmt.Printf("%q\n", re.FindStringSubmatch(readed))
-	//m.Body.string = "Body"
+	s, _ := returnValue("=?UTF-8?B?0KDQsNGB0YLQvtGA0LbQtdC90LjQtSDQv9C+0LTQv9C40YE=?=")
+	fmt.Println(s)
 
 	return nil
 }
