@@ -55,7 +55,7 @@ type Body struct {
 
 func readfile(filename string) string {
 	data, err := ioutil.ReadFile(Inbox + "/" + filename)
-	if err != nil {
+	if err != nil { // если что-то пошло не так, то сохраняем ошибку и возвращаем пустую строку
 		fmt.Println(err)
 		return ""
 	}
@@ -63,8 +63,11 @@ func readfile(filename string) string {
 }
 
 func (m *Mail_) Parser(info os.FileInfo) error {
+	var modifiedLineArray []string // массив строк, куда будем складывать полностью форматированные строки
+
+	// входные данные
 	readed := readfile(info.Name())
-	if readed == "" {
+	if readed == "" { // если данный файл пустой, то выдаем ошибку
 		fmt.Println("Error::Cant read file")
 		return fmt.Errorf("Error:Cant read file::Empty input")
 	}
@@ -73,24 +76,14 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 
 	//regexp для заголовков ^[a-zA-Z].[a-zA-Z-0-9]+:
 
-	rawLineArray := strings.Split(strings.TrimSuffix(readed, "\n"), "\n")
-	lastHeaderIndex := 0
-	var modifiedLineArray []string
+	rawLineArray := strings.Split(strings.TrimSuffix(strings.TrimSuffix(readed, "\n"), "\r"), "\n")
+	//rawLineArray := strings.Split(readed, "\n") // разбиваем считанную из файла информацию на строки
+	// получаем "грязные" строки, то есть некоторые заголовки являются многострочными.
+	// Надо сделать 1 заголовок = 1 строка
 
-	//match := false
 
-	fmt.Println("===============================================\n===============================================\n===============================================\n")
+	// "Очистка данных
 	for _, line := range rawLineArray {
-		fmt.Println(line + "\n")
-	}
-	fmt.Println("===============================================\n===============================================\n===============================================\n")
-
-	for index, line := range rawLineArray {
-
-		//
-		//if index == 0 {
-		//	modifiedLineArray = append(modifiedLineArray, line)
-		//}
 
 		// если lineArray[index] содержит заголовок (проверяем при помощи regexp)
 		// то добавляем эту строку к последнему заголовку
@@ -101,57 +94,55 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 			return fmt.Errorf("Error:Cant parse file::Bad input")
 		}
 
+
 		if !match {
-			if index > len(rawLineArray) {
-				modifiedLineArray[lastHeaderIndex] += " " + line
-			}
+			modifiedLineArray[len(modifiedLineArray) - 1] =
+				strings.TrimRight(string(modifiedLineArray[len(modifiedLineArray) - 1]) +
+					strings.ReplaceAll(line, "\t", ""), "\r\n")
 		} else {
-			lastHeaderIndex = index
-			modifiedLineArray = append(modifiedLineArray, line)
+			matched := strings.TrimRight(line, "\r\n")
+			modifiedLineArray = append(modifiedLineArray, matched)
 		}
 
-		//if line
-
-		//if len(line) >= 15 && line[:12] == "Delivered-To" {
-		//	m.NominalAddress.TO = line[14:]
-		//}
-		//
-		//if len(line) >= 14 && line[:11] == "Return-path" {
-		//	m.NominalAddress.From = line[13:]
-		//}
-		//
-		//if len(line) >= 25 && line[:22] == "Authentication-Results" {
-		//	m.Address.From = line[24:]
-		//}
-		//
-		//
-		//if len(line) >= 7 && line[:4] == "From" {
-		//	m.Address.From = line[6:]
-		//}
-		//
-		//if len(line) >= 5 && line[:2] == "From" {
-		//	m.Address.From = line[4:]
-		//}
-		//
-		//if len(line) >= 12 && line[:10] == "Message-ID" {
-		//	m.Headers.MessageId = line[11:]
-		//}
-		//
-		//if len(line) >=9 && line[:7] == "Subject" {
-		//	m.Headers.Subject = line[8:]
-		//}
-
 	}
 
-	// для проверки выведем. потом можно удалить этот кусок кода
+
+	// распаковка данных по структуре Mail (сопоставление заголовков с данными)
 	for _, line := range modifiedLineArray {
-		fmt.Println(line)
+
+		if len(line) >= 15 && line[:12] == "Delivered-To" {
+			m.NominalAddress.TO = line[14:]
+		}
+
+		if len(line) >= 14 && line[:11] == "Return-path" {
+			m.NominalAddress.From = line[13:]
+		}
+
+		if len(line) >= 25 && line[:22] == "Authentication-Results" {
+			m.Address.From = line[24:]
+		}
+
+
+		if len(line) >= 7 && line[:4] == "From" {
+			m.Address.From = line[6:]
+		}
+
+		if len(line) >= 5 && line[:2] == "From" {
+			m.Address.From = line[4:]
+		}
+
+		if len(line) >= 12 && line[:10] == "Message-ID" {
+			m.Headers.MessageId = line[11:]
+		}
+
+		if len(line) >=9 && line[:7] == "Subject" {
+			m.Headers.Subject = line[8:]
+		}
 	}
 
-	//fmt.Println(readed)
 
-	re := regexp.MustCompile(`To`)
-	fmt.Printf("%q\n", re.FindStringSubmatch(readed))
+	//re := regexp.MustCompile(`To`)
+	//fmt.Printf("%q\n", re.FindStringSubmatch(readed))
 	//m.Body.string = "Body"
 
 	return nil
