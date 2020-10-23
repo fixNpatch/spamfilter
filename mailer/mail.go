@@ -68,11 +68,11 @@ func returnValue(input string) (string, error) {
 	splitted := regular.FindStringSubmatch(input) // выделение частей
 	charst, encodng, encodtxt := splitted[1], splitted[2], splitted[3]
 
-	// проверка (можно удалить вывод)
-	fmt.Println(charst, encodng, encodtxt)
+	_ = encodng + charst // заглушка
+
 
 	// декодирование по выбранной кодировке (пока сделано только для base64)
-	decoded, err := b64.StdEncoding.DecodeString("0KDQsNGB0YLQvtGA0LbQtdC90LjQtSDQv9C+0LTQv9C40YE=")
+	decoded, err := b64.StdEncoding.DecodeString(encodtxt)
 	if err != nil {
 		fmt.Println("Error::Bad converting::Base64 => UTF-8")
 		return "", err
@@ -107,7 +107,7 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 	// Надо сделать 1 заголовок = 1 строка
 
 
-	// "Очистка данных
+	// "Очистка" данных
 	for _, line := range rawLineArray {
 
 		// если lineArray[index] содержит заголовок (проверяем при помощи regexp)
@@ -132,8 +132,36 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 	}
 
 
+	var clearLine string
+
 	// распаковка данных по структуре Mail (сопоставление заголовков с данными)
 	for _, line := range modifiedLineArray {
+
+
+		// проверяем есть декодированные части в очередной рассматриваемой строке
+		match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, line)
+		if err != nil {
+			fmt.Println("Error::Something wrong with your Regexp")
+			return fmt.Errorf("Error:Cant parse file::Bad input")
+		}
+		if match { // если есть закодированные части, то необходимо раскодировать каждую из них
+			sublines := strings.Split(line, " ") // берем разделение по пробелам
+			for _, subline := range sublines { // рассматриваем каждую из частей
+				// если взята закодированная часть, то декодируем её и результат добавляем в результирующую строку
+				if match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, subline); err == nil && match {
+					tmp, err := returnValue(subline)
+					if err != nil {
+						fmt.Println(err)
+						return err
+					}
+					clearLine += tmp + " "
+				} else { // если часть не закодированна, то просто добавляем её в результат
+					clearLine += subline + " "
+				}
+			}
+			line = clearLine // заменяем оригинальную строку результирующей.
+		}
+
 
 		if len(line) >= 15 && line[:12] == "Delivered-To" {
 			m.NominalAddress.TO = line[14:]
@@ -146,7 +174,6 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		if len(line) >= 25 && line[:22] == "Authentication-Results" {
 			m.Address.From = line[24:]
 		}
-
 
 		if len(line) >= 7 && line[:4] == "From" {
 			m.Address.From = line[6:]
@@ -165,22 +192,6 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		}
 	}
 
-	s, _ := returnValue("=?UTF-8?B?0KDQsNGB0YLQvtGA0LbQtdC90LjQtSDQv9C+0LTQv9C40YE=?=")
-	fmt.Println(s)
-
 	return nil
 }
 
-func (m *Mail_) Checker() {
-
-	fmt.Println(m.NominalAddress.TO)
-	fmt.Println(m.NominalAddress.From)
-	fmt.Println(m.Address.From)
-
-	//reasonsNumber=0
-
-	//if len(m.Headers.Subject) > 120:
-	//reasons
-
-	return
-}
