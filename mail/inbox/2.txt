@@ -1,0 +1,736 @@
+Delivered-To: titov.ant.workmail@gmail.com
+Received: by 2002:ab3:1a4a:0:0:0:0:0 with SMTP id g68csp912658ltg;
+        Fri, 23 Oct 2020 21:12:03 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxxtABuTeC1vtIoc7rUAII0Iz9DTtVHIcHavbln/CNtZPL4H6jTKMRcBykKV+/+d6+CGkqG
+X-Received: by 2002:a05:6402:17e4:: with SMTP id t4mr5547654edy.118.1603512723005;
+        Fri, 23 Oct 2020 21:12:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1603512723; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Uh3OvUFI85BHB1WM/B0wWdozMm8chIYZs97rf2F/+uKL2oXN2ObbdvLRFAjLBJa7ap
+         lYF4UkV8YArDvUwU5Fl6wa0iaJ2deskS5XCxwT0LDNWAYWD5E5FQpOFHOtrlfD5Pmngu
+         e7YGPtW1RwGlsAQQRQIQFqrCHhnMwLwM9UN4NOLvoKmakI2hEg7CsrF++WKgxSCVr/9r
+         oChfNVook23NyaTk8t2KHKve2V1Q89W0ScrqXvSZ3HXXRdMWcZ6G2z8lz2FCYqtKYBaX
+         uL/KyUzc7SZpv5/xSQWuJMBKBsKdNEFgnp65mxg0WDRwCsmgpvQf7unATih2EywSwXVy
+         TPuw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:to:list-unsubscribe-post:list-unsubscribe
+         :mime-version:from:subject:content-transfer-encoding:dkim-signature;
+        bh=Utl8FcZoou8n/7vtlUTQ3njZ0bup+R2M5AJtmuoVbeI=;
+        b=KJDDcaU1QWNfIc7xnPXBfq5wO4gp7i6nIDn6IxSB4jLCYDn8maDib0PSqaC6/4I2Ny
+         nUGf8IeLp3OT+kXLpDkWjpkQdVD3elBQ2jDjav+U7aGCfqXoLbKxJ5E+c1iMojvs/4lq
+         Gwn+kIKURXpjmtdX3Io6V0fNytoNx7xdY3l3Gote89kwv4rPGlpb4TaLrzSlPqtwwr6x
+         MxBX+61sd5jnP0nwGKgQ1ssNiCAJM1WwGTGpc5QuciSo614ZXMZEw0v4t3UH6BLQs/v9
+         4g0FybUcK1tJWoe0V15XtfqjPTF1deuA7p/NNbRDw+B0WaHHEVoy3TA3wAMthaM8nMSz
+         NsPg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@site.hh.ru header.s=mail header.b="R24D/Cru";
+       spf=pass (google.com: domain of info@site.hh.ru designates 94.124.203.150 as permitted sender) smtp.mailfrom=info@site.hh.ru;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=hh.ru
+Return-Path: <info@site.hh.ru>
+Received: from mrelay-bulk1.hh.ru (mrelay-bulk1.hh.ru. [94.124.203.150])
+        by mx.google.com with ESMTP id u1si2190218edo.205.2020.10.23.21.12.02
+        for <titov.ant.workmail@gmail.com>;
+        Fri, 23 Oct 2020 21:12:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of info@site.hh.ru designates 94.124.203.150 as permitted sender) client-ip=94.124.203.150;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@site.hh.ru header.s=mail header.b="R24D/Cru";
+       spf=pass (google.com: domain of info@site.hh.ru designates 94.124.203.150 as permitted sender) smtp.mailfrom=info@site.hh.ru;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=hh.ru
+Received: from docker60.prod (balancer5.prod [172.16.36.22]) by mrelay-bulk1.hh.ru (Postfix) with SMTP id 4CJ7362J9pz9180 for <titov.ant.workmail@gmail.com>; Sat, 24 Oct 2020 07:12:02 +0300 (MSK)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=site.hh.ru; s=mail; t=1603512722; bh=Utl8FcZoou8n/7vtlUTQ3njZ0bup+R2M5AJtmuoVbeI=; h=Subject:From:List-Unsubscribe:To:Date:From; b=R24D/Cru8USGJzUPVxs3S4WDvvQB87sgkVWoECfU3YpmlqJfw3He//MIGnU3ZtbVP
+	 W0Rz3mrHyy1orLX84RPP8pioa4xUfhN7HI7I4DRpk12Q53MtPyhaEBqE+4NEcCnCip
+	 vFoc6EDtlJn+Q8ueP8ofj4k6AWJHMMUJSTQ+gpBQ=
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Subject: Антон, гайд по оценке вакансий и работодателей
+From: "hh.ru" <info@site.hh.ru>
+MIME-Version: 1.0
+List-Unsubscribe: <https://hh.ru/unsubscribe/51dc01e9-0e5c-4393-b0fa-fd56cf92e52b?date=2020-10-24&t=hhapplicant_digest&s=298f2cff8a74e0f70af81b2413460be38a242d392de9121125699983ad0451cf&direct=true>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+To: "Титов Антон" <titov.ant.workmail@gmail.com>
+X-HH-TAGS: [utm_campaign=misc_app_ex_241020][mailing_id=13447][sender=hh-as][mailing_type=mass_mailing][subject_general_part=???? ?? ?????? ???????? ? ?????????????][hhid=66804029][mailing_date=2020-10-24]
+X-Postmaster-Msgtype: mass_mailing
+Message-Id: <4CJ7362J9pz9180@mrelay-bulk1.hh.ru>
+Date: Sat, 24 Oct 2020 07:12:02 +0300 (MSK)
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or=
+g/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml"><head><META http-equiv=3D"Cont=
+ent-Type" content=3D"text/html; charset=3DUTF-8"><meta http-equiv=3D"Conten=
+t-Type" content=3D"text/html; charset=3Dutf-8"><meta name=3D"viewport" cont=
+ent=3D"width=3Ddevice-width, initial-scale=3D1.0"><title>=D0=9F=D0=B8=D1=81=
+=D1=8C=D0=BC=D0=BE</title><style type=3D"text/css">
+          .ReadMsgBody {
+            width: 100%;
+            background-color: #ffffff;
+            color: #333333;
+          }
+          .ExternalClass {
+            width: 100%;
+            background-color: #ffffff;
+            color: #333333;
+          }
+          #outlook a {
+            padding: 0;
+          }
+          body {
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+          }
+          .ExternalClass {
+            width: 100%;
+          }
+          .ExternalClass,
+          .ExternalClass p,
+          .ExternalClass span,
+          .ExternalClass font,
+          .ExternalClass td,
+          .ExternalClass div {
+            line-height: 100%;
+          }
+          @media screen and (max-width:1023px) {
+            .mobile-visible {
+              display: inline-block !important;
+              width: auto !important;
+              height: auto !important;
+              max-height: none !important;
+            }
+            .mobile-hidden {
+              position: absolute !important;
+              left: -1000px !important;
+              display: none !important;
+              min-width: 0 !important;
+              width: 0 !important;
+              min-height: 0 !important;
+              height: 0 !important;
+              max-height: 0 !important;
+            }
+            .device-width {
+              width: 99.9% !important;
+              width: 100% !important;
+            }
+            .device-clear {
+              float: none !important;
+              width: 99.9% !important;
+              width: 100% !important;
+            }
+            .g-h1 {font-size:16px!important;line-height:22px!important;}
+            .g-h2 {font-size:15px!important;line-height:18px!important;}
+            .g-paragraph {font-size:14px!important;line-height:20px!importa=
+nt;}
+            .l-wrapper {
+              background: #fff !important;
+            }
+            .l-content {
+              padding-top: 0 !important;
+            }
+            .l-layout {}
+            .l-footer {
+              background: #eeeeee !important;
+            }
+            .logo {
+              display: table !important;
+              width: 732px !important;
+              width: 100% !important;
+              padding-right: 0 !important;
+              padding-left: 0 !important;
+              text-align: center !important;
+            }
+            .header__logo-mobile {
+              width: 40px !important;
+              height: 40px !important;
+            }
+            .navi {
+              display: none !important;
+            }
+            .nav {width:50%!important;}
+            .nav-item {float:none!important;width:100%!important;max-width:=
+100%!important;}
+            .nav-item__text {font-size: 14px !important;}
+            .footer-menu {
+              float: none !important;
+              margin: 0 auto !important;
+              text-align: center !important;
+            }
+            .footer-menu-link {}
+            .footer-copyright {}
+            .footer-copyright-text {
+              text-align: center !important;
+            }
+            .footer-hint {
+              margin-top: 2px !important;
+            }
+            .footer-hint-text {
+              text-align: center !important;
+              font-size: 11px !important;
+              line-height: 18px !important;
+            }
+            .image {
+              position: absolute !important;
+              left: -1000px !important;
+              display: none !important;
+              min-width: 0 !important;
+              width: 0 !important;
+              min-height: 0 !important;
+              height: 0 !important;
+            }
+            .info {
+              margin-top: 15px !important;
+              font-size: 14px !important;
+              line-height: 21px !important;
+            }
+            .info_last {
+              margin-top: 20px !important;
+            }
+            .button {}
+            .button-box {}
+            .button-label {}
+            .socials {
+              padding-top: 20px !important;
+              text-align: center !important;
+            }
+            .adaptive-col {
+              float: none !important;
+              width: 99.9% !important;
+              width: 100% !important;
+              max-width:100%!important;
+            }
+            .adaptive-padding {
+              padding-right: 9% !important;
+              padding-left: 9% !important;
+            }
+            .adaptive-no-aflat-shift {
+              padding-right: 0 !important;
+              padding-left: 0 !important;
+              margin-right: 0 !important;
+              margin-left: 0 !important;
+            }
+            .adaptive-no-vert-shift {
+              padding-top: 0 !important;
+              padding-bottom: 0 !important;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+            }
+            .adaptive-col__inner {
+              padding-top: 20px !important;
+            }
+            .adaptive-bottom-padding {
+              padding-bottom: 30px !important;
+            }
+            .adaptive-separator {
+              display: block !important;
+              width: auto !important;
+              height: auto !important;
+              max-height: none !important;
+            }
+            .adaptive-block {
+              display: block !important;
+              max-width: none !important;
+              width: auto !important;
+            }
+            .adaptive-image {
+              width: 99.9% !important;
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+            .header_logo .header__info {
+              display: none;
+            }
+            .header_logo .header__logo {
+              text-align: center;
+            }
+            .footer-row {
+              display: block;
+              padding-bottom: 0 !important;
+            }
+            .footer-row__item {
+              display: block !important;
+              max-width:100% !important;
+            }
+            .footer-row__table {
+              float: none !important;
+            }
+            .footer-row__body {
+              display: table;
+              width: 99.9%;
+              width: 100%;
+            }
+            .footer-row__info {
+              display: table-cell;
+              vertical-align: top;
+            }
+          }
+          @media screen and (max-width:374px) {
+            .footer-menu-link {
+              font-size: 11px !important;
+              line-height: 12px !important;
+            }
+          }
+          img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+          }
+          a img {
+            border: none;
+          }
+          .image_fix {
+            display: block;
+          }
+          p {
+            margin: 0.2em 0;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            color: #333333 !important;
+          }
+          h1 a,
+          h2 a,
+          h3 a,
+          h4 a,
+          h5 a,
+          h6 a {
+            color: #0099ff !important;
+          }
+          h1 a:hover,
+          h2 a:hover,
+          h3 a:hover,
+          h4 a:hover,
+          h5 a:hover,
+          h6 a:hover {
+            text-decoration: underline;
+          }
+          h1 a:active,
+          h2 a:active,
+          h3 a:active,
+          h4 a:active,
+          h5 a:active,
+          h6 a:active {
+            color: #0099ff !important;
+          }
+          h1 a:visited,
+          h2 a:visited,
+          h3 a:visited,
+          h4 a:visited,
+          h5 a:visited,
+          h6 a:visited {
+            color: #0099ff !important;
+          }
+          table td {
+            border-collapse: collapse;
+          }
+          table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+          }
+          a {
+            color: #0096ff;
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: none !important;
+          }
+          .button-label:hover {
+            color: #ffffff !important;
+            text-decoration: none !important;
+          }
+          .mobile-visible {}
+          .mobile-hidden {}
+          .smart-list {}
+        </style></head><body style=3D"background:#f5f5f5;color:#333333;font=
+-family:Arial, sans-serif;-webkit-text-size-adjust:100%;" leftmargin=3D"0" =
+topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0"><!--WRAPPER--><table s=
+tyle=3D"background:#f5f5f5;" width=3D"100%" bgcolor=3D"#f5f5f5" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" align=3D"center"><tr><td style=3D"ver=
+tical-align:top;" class=3D"l-wrapper" valign=3D"top"><!--WRAPPER-BGR--><div=
+ style=3D"width:100%;max-width:780px;margin:0 auto;background:#fff;" class=
+=3D"header device-width"><!--[if mso]>
+                <table width=3D"780" style=3D"width:780px;margin-bottom: 24=
+.5px;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+                <![endif]--><!--[if !mso]><!--><table width=3D"100%" style=
+=3D"width:100%;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"=
+center"><!--<![endif]--><tr><td style=3D"vertical-align:top;background:#fff=
+;" valign=3D"top" align=3D"left"><!--HEADER--><div style=3D"width:100%;max-=
+width:660px;margin:0 auto;" class=3D"device-width"><!--[if mso]>
+                          <table width=3D"660" style=3D"width:660px;" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+                          <![endif]--><!--[if !mso]><!--><table style=3D"wi=
+dth:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=
+<!--<![endif]--><tr><td class=3D"l-layout" style=3D"padding:35px 20px 25px;=
+vertical-align:middle;background:#fff;" valign=3D"middle" align=3D"left"><t=
+able width=3D"100%" style=3D"width:100%;text-align:left;" cellpadding=3D"0"=
+ cellspacing=3D"0" align=3D"left"><tr><td class=3D"header__logo" style=3D"v=
+ertical-align:middle;text-align:left;" valign=3D"middle" align=3D"left"><a =
+style=3D"text-decoration:none;" href=3D"http://hh.ru/?utm_source=3Demail&am=
+p;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;sent_date=3D=
+2020_10_24&amp;utm_content=3Dlogo" target=3D"_blank"><img class=3D"" style=
+=3D"vertical-align:top;width:50px !important;max-width:50px !important;" wi=
+dth=3D"50" border=3D"0" src=3D"https://i.hh.ru/mailing/hh.ru/mass/logo.png?=
+h=3D3b4137b834c8fccee4aadeb22d5e7249&amp;i=3D66804029&amp;e=3Dtitov.ant.wor=
+kmail@gmail.com&amp;utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campa=
+ign=3Dmisc_app_ex_241020&amp;sent_date=3D2020_10_24&amp;utm_content=3Dlogo"=
+ alt=3D""></a></td></tr></table></td></tr></table></div><!--/HEADER--><!--B=
+ODY--><div style=3D"width:100%;max-width:660px;margin:0 auto;" class=3D"dev=
+ice-width"><!--=D0=A8=D0=B0=D0=B1=D0=BB=D0=BE=D0=BD =D1=81=D0=B0=D0=BC=D0=
+=BE=D0=B3=D0=BE =D1=81=D0=BE=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D0=BC=D0=BE=D0=
+=B3=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0 (=D0=B2=D1=8B=D0=B4=D0=B5=D0=
+=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B2 =D0=BE=D1=82=D0=B4=D0=B5=D0=BB=D1=
+=8C=D0=BD=D1=8B=D0=B9 =D1=88=D0=B0=D0=B1=D0=BB=D0=BE=D0=BD)--><!--[if mso]>
+                          <table width=3D"660" style=3D"width:660px;" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+                          <![endif]--><!--[if !mso]><!--><table style=3D"wi=
+dth:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center"><!--<![endif]--><tr><td class=3D"l-layout" style=3D"paddin=
+g:10px 20px 30px;vertical-align:top;text-align:left;" valign=3D"top"><table=
+ style=3D"width:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"left"><!-- =D0=A2=D0=B5=D0=BA=D1=81=D1=82 --><tr><td s=
+tyle=3D"vertical-align:top;" valign=3D"top" align=3D"left"><table style=3D"=
+width:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" align=3D"left"><tr><td style=3D"vertical-align:top;" valign=3D"top"><tabl=
+e style=3D"width:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" xmlns=3D""><tr><td style=3D"padding:0 0 30px;vertical-align:to=
+p;text-align:left;" valign=3D"top" data-qa=3D"mail__block"><table style=3D"=
+width:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+"><tr><td class=3D"" style=3D"padding:0;vertical-align:top;text-align:left;=
+" valign=3D"top"><a style=3D"text-decoration:none;" target=3D"_blank" href=
+=3D"https://hh.ru/article/24458?utm_source=3Demail&amp;utm_medium=3Demail&a=
+mp;utm_campaign=3Dmisc_app_ex_241020&amp;utm_content=3Darticle24458&amp;sen=
+t_date=3D2020_10_24&amp;mid=3D13447&amp;id=3D66804029"><img class=3D"adapti=
+ve-col" style=3D"vertical-align:top;width:100%;" width=3D"100%" border=3D"0=
+" alt=3D"" src=3D"https://hhcdn.ru/file/16945202.png"></a></td></tr><tr><td=
+ class=3D"" style=3D"background:#fff;padding:12px 0 0;vertical-align:top;te=
+xt-align:left;" valign=3D"top"><p class=3D"g-h1" style=3D"margin:0;color:#3=
+33333;font:bold 20px/24px Arial, sans-serif;"><a style=3D"text-decoration:n=
+one;color:#333333;" target=3D"_blank" href=3D"https://hh.ru/article/24458?u=
+tm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241=
+020&amp;utm_content=3Darticle24458&amp;sent_date=3D2020_10_24&amp;mid=3D134=
+47&amp;id=3D66804029">=D0=A1=D1=82=D0=BE=D0=B8=D1=82&nbsp;=D0=BB=D0=B8 =D0=
+=BE=D1=82=D0=BA=D0=BB=D0=B8=D0=BA=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BD=D0=
+=B0&nbsp;=D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=D1=8E</a></p><p class=
+=3D"g-paragraph" style=3D"margin:8px 0 0;color:#8E939B;font:14px/20px Arial=
+,sans-serif;"><a style=3D"text-decoration:none;color:#8E939B;" target=3D"_b=
+lank" href=3D"https://hh.ru/article/24458?utm_source=3Demail&amp;utm_medium=
+=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;utm_content=3Darticle244=
+58&amp;sent_date=3D2020_10_24&amp;mid=3D13447&amp;id=3D66804029">&laquo;=D0=
+=9F=D1=80=D0=B8=D0=BD=D1=86=D0=B8=D0=BF =D1=81=D0=B2=D0=B5=D1=82=D0=BE=D1=
+=84=D0=BE=D1=80=D0=B0&raquo;, =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9 =
+=D0=BF=D0=BE=D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =D0=BE=D1=86=D0=B5=D0=BD=D0=B8=
+=D1=82=D1=8C =D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=D1=8E: =D0=BF=D1=80=
+=D0=B8=D0=B7=D0=BD=D0=B0=D0=BA=D0=B8 =D1=85=D0=BE=D1=80=D0=BE=D1=88=D0=B8=
+=D1=85 =D0=B8&nbsp;=D0=BF=D0=BE=D0=B4=D0=BE=D0=B7=D1=80=D0=B8=D1=82=D0=B5=
+=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=BE=D0=B6=
+=D0=B5=D0=BD=D0=B8=D0=B9 =D0=BE&nbsp;=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=B5.<=
+/a></p></td></tr></table></td></tr></table><table style=3D"width:100%" widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=
+=3D"padding:0 0 20px;vertical-align:top;" valign=3D"top" data-qa=3D"mail__a=
+dvert-block"><table style=3D"width:100%" width=3D"100%" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0"><tr><!--[if !mso]><!--><td style=3D"padding:0=
+;color:#fff;vertical-align:top;" valign=3D"top"><table class=3D"adaptive-co=
+l" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left"><tr><!--=
+<![endif]--><td class=3D"adaptive-no-aflat-shift" style=3D"padding:0 20px 1=
+0px 0;color:#fff;vertical-align:top;max-width: 220px!important;" valign=3D"=
+top"><a style=3D"text-decoration:none;" target=3D"_blank" href=3D"https://h=
+h.ru/article/27112?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campai=
+gn=3Dmisc_app_ex_241020&amp;utm_content=3Darticle27112&amp;sent_date=3D2020=
+_10_24&amp;mid=3D13447&amp;id=3D66804029"><img class=3D"adaptive-col" style=
+=3D"vertical-align:top;max-width: 220px;width: 100%;" width=3D"220" border=
+=3D"0" src=3D"https://hhcdn.ru/file/16945203.png" alt=3D""></a></td><!--[if=
+ !mso]><!--></tr></table><table class=3D"adaptive-col" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" align=3D"left"><tr><!--<![endif]--><td class=
+=3D"adaptive-col adaptive-no-aflat-shift" style=3D"padding:0 0 10px;color:#=
+fff;vertical-align:top;" valign=3D"top"><table class=3D"adaptive-col" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left"><tr><td class=3D=
+"adaptive-col" width=3D"380" style=3D"padding:0;vertical-align:top;" valign=
+=3D"top"><p class=3D"g-h1" style=3D"margin:0;color:#333333;font:bold 20px/2=
+4px Arial, sans-serif;"><a style=3D"text-decoration:none;color:#333333;" ta=
+rget=3D"_blank" href=3D"https://hh.ru/article/27112?utm_source=3Demail&amp;=
+utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;utm_content=3D=
+article27112&amp;sent_date=3D2020_10_24&amp;mid=3D13447&amp;id=3D66804029">=
+=D0=A0=D0=B0=D0=B1=D0=BE=D1=82=D0=BE=D0=B4=D0=B0=D1=82=D0=B5=D0=BB=D1=8C =
+=D0=B8=D0=BB=D0=B8 =D0=BC=D0=BE=D1=88=D0=B5=D0=BD=D0=BD=D0=B8=D0=BA?</a></p=
+><p class=3D"g-paragraph" style=3D"margin:8px 0 0;color:#8E939B;font:14px/2=
+0px Arial,sans-serif;"><a style=3D"text-decoration:none;color:#8E939B;" tar=
+get=3D"_blank" href=3D"https://hh.ru/article/27112?utm_source=3Demail&amp;u=
+tm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;utm_content=3Da=
+rticle27112&amp;sent_date=3D2020_10_24&amp;mid=3D13447&amp;id=3D66804029">=
+=D0=9A=D0=B0=D0=BA =D0=B2=D1=8B=D1=87=D0=B8=D1=81=D0=BB=D0=B8=D1=82=D1=8C =
+=D0=BD=D0=B5=D0=B4=D0=BE=D0=B1=D1=80=D0=BE=D1=81=D0=BE=D0=B2=D0=B5=D1=81=D1=
+=82=D0=BD=D1=8B=D1=85 =D0=BB=D0=B8=D1=86, =D0=BF=D1=80=D0=B8=D1=82=D0=B2=D0=
+=BE=D1=80=D1=8F=D1=8E=D1=89=D0=B8=D1=85=D1=81=D1=8F =D1=80=D0=B0=D0=B1=D0=
+=BE=D1=82=D0=BE=D0=B4=D0=B0=D1=82=D0=B5=D0=BB=D1=8F=D0=BC=D0=B8. =D0=98&nbs=
+p;=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=BE=D0=B4=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=
+=D0=B9, =D0=BE=D1=82&nbsp;=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =D0=BD=
+=D0=B5&nbsp;=D1=81=D1=82=D0=BE=D0=B8=D1=82 =D0=B6=D0=B4=D0=B0=D1=82=D1=8C =
+=D1=85=D0=BE=D1=80=D0=BE=D1=88=D0=B5=D0=B3=D0=BE.</a></p></td></tr></table>=
+</td><!--[if !mso]><!--></tr></table></td><!--<![endif]--></tr></table></td=
+></tr></table><table style=3D"width:100%" width=3D"100%" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0"><tr><td style=3D"padding:0 0 20px;vertical-a=
+lign:top;" valign=3D"top" data-qa=3D"mail__advert-block"><table style=3D"wi=
+dth:100%" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><=
+tr><!--[if !mso]><!--><td style=3D"padding:0;color:#fff;vertical-align:top;=
+" valign=3D"top"><table class=3D"adaptive-col" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" align=3D"left"><tr><!--<![endif]--><td class=3D"adapti=
+ve-no-aflat-shift" style=3D"padding:0 20px 10px 0;color:#fff;vertical-align=
+:top;max-width: 220px!important;" valign=3D"top"><a style=3D"text-decoratio=
+n:none;" target=3D"_blank" href=3D"https://hh.ru/article/27259?utm_source=
+=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;u=
+tm_content=3Darticle27259&amp;sent_date=3D2020_10_24&amp;mid=3D13447&amp;id=
+=3D66804029"><img class=3D"adaptive-col" style=3D"vertical-align:top;max-wi=
+dth: 220px;width: 100%;" width=3D"220" border=3D"0" src=3D"https://hhcdn.ru=
+/file/16945204.png" alt=3D""></a></td><!--[if !mso]><!--></tr></table><tabl=
+e class=3D"adaptive-col" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" a=
+lign=3D"left"><tr><!--<![endif]--><td class=3D"adaptive-col adaptive-no-afl=
+at-shift" style=3D"padding:0 0 10px;color:#fff;vertical-align:top;" valign=
+=3D"top"><table class=3D"adaptive-col" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" align=3D"left"><tr><td class=3D"adaptive-col" width=3D"380" st=
+yle=3D"padding:0;vertical-align:top;" valign=3D"top"><p class=3D"g-h1" styl=
+e=3D"margin:0;color:#333333;font:bold 20px/24px Arial, sans-serif;"><a styl=
+e=3D"text-decoration:none;color:#333333;" target=3D"_blank" href=3D"https:/=
+/hh.ru/article/27259?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_camp=
+aign=3Dmisc_app_ex_241020&amp;utm_content=3Darticle27259&amp;sent_date=3D20=
+20_10_24&amp;mid=3D13447&amp;id=3D66804029">=D0=95=D1=81=D0=BB=D0=B8 =D0=B2=
+&nbsp;=D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=D0=B8 =D0=BD=D0=B5=D1=82 =
+=D0=BD=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =D0=BA=D0=BE=D0=BC=D0=BF=
+=D0=B0=D0=BD=D0=B8=D0=B8</a></p><p class=3D"g-paragraph" style=3D"margin:8p=
+x 0 0;color:#8E939B;font:14px/20px Arial,sans-serif;"><a style=3D"text-deco=
+ration:none;color:#8E939B;" target=3D"_blank" href=3D"https://hh.ru/article=
+/27259?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_ap=
+p_ex_241020&amp;utm_content=3Darticle27259&amp;sent_date=3D2020_10_24&amp;m=
+id=3D13447&amp;id=3D66804029">=D0=98=D0=BD=D0=BE=D0=B3=D0=B4=D0=B0 =D1=82=
+=D0=B0=D0=BA=D0=BE=D0=B5 =D1=81=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D1=82=D1=81=
+=D1=8F: =D0=BD=D0=B5=D0=BF=D0=BE=D0=BD=D1=8F=D1=82=D0=BD=D0=BE, =D0=BA=D1=
+=82=D0=BE =D0=B8=D1=89=D0=B5=D1=82 =D1=81=D0=BE=D1=82=D1=80=D1=83=D0=B4=D0=
+=BD=D0=B8=D0=BA=D0=B0. =D0=9F=D0=BE=D1=87=D0=B5=D0=BC=D1=83 =D0=BC=D1=8B&nb=
+sp;=D1=8D=D1=82=D0=BE =D0=B4=D0=BE=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=
+=BC =D0=B8&nbsp;=D1=81=D1=82=D0=BE=D0=B8=D1=82&nbsp;=D0=BB=D0=B8 =D0=B4=D0=
+=BE=D0=B2=D0=B5=D1=80=D1=8F=D1=82=D1=8C =D1=82=D0=B0=D0=BA=D0=B8=D0=BC =D0=
+=BE=D0=B1=D1=8A=D1=8F=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D1=8F=D0=BC =D0=BE&nbsp=
+;=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=B5.</a></p></td></tr></table></td><!--[i=
+f !mso]><!--></tr></table></td><!--<![endif]--></tr></table></td></tr></tab=
+le><table style=3D"width:100%" width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0"><tr><td style=3D"padding:0 0 20px;vertical-align:top;" =
+valign=3D"top" data-qa=3D"mail__advert-block"><table style=3D"width:100%" w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><!--[if =
+!mso]><!--><td style=3D"padding:0;color:#fff;vertical-align:top;" valign=3D=
+"top"><table class=3D"adaptive-col" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" align=3D"left"><tr><!--<![endif]--><td class=3D"adaptive-no-aflat=
+-shift" style=3D"padding:0 20px 10px 0;color:#fff;vertical-align:top;max-wi=
+dth: 220px!important;" valign=3D"top"><a style=3D"text-decoration:none;" ta=
+rget=3D"_blank" href=3D"https://hh.ru/article/27258?utm_source=3Demail&amp;=
+utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;utm_content=3D=
+article27258&amp;sent_date=3D2020_10_24&amp;mid=3D13447&amp;id=3D66804029">=
+<img class=3D"adaptive-col" style=3D"vertical-align:top;max-width: 220px;wi=
+dth: 100%;" width=3D"220" border=3D"0" src=3D"https://hhcdn.ru/file/1694520=
+7.png" alt=3D""></a></td><!--[if !mso]><!--></tr></table><table class=3D"ad=
+aptive-col" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left"=
+><tr><!--<![endif]--><td class=3D"adaptive-col adaptive-no-aflat-shift" sty=
+le=3D"padding:0 0 10px;color:#fff;vertical-align:top;" valign=3D"top"><tabl=
+e class=3D"adaptive-col" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" a=
+lign=3D"left"><tr><td class=3D"adaptive-col" width=3D"380" style=3D"padding=
+:0;vertical-align:top;" valign=3D"top"><p class=3D"g-h1" style=3D"margin:0;=
+color:#333333;font:bold 20px/24px Arial, sans-serif;"><a style=3D"text-deco=
+ration:none;color:#333333;" target=3D"_blank" href=3D"https://hh.ru/article=
+/27258?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_ap=
+p_ex_241020&amp;utm_content=3Darticle27258&amp;sent_date=3D2020_10_24&amp;m=
+id=3D13447&amp;id=3D66804029">=D0=97=D0=B0=D0=BC=D0=B5=D1=82=D0=B8=D0=BB=D0=
+=B8 =D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=D1=8E, =D0=BA=D0=BE=D1=82=D0=
+=BE=D1=80=D0=B0=D1=8F &laquo;=D0=B2=D0=B8=D1=81=D0=B8=D1=82 =D0=B3=D0=BE=D0=
+=B4=D0=B0=D0=BC=D0=B8&raquo;?</a></p><p class=3D"g-paragraph" style=3D"marg=
+in:8px 0 0;color:#8E939B;font:14px/20px Arial,sans-serif;"><a style=3D"text=
+-decoration:none;color:#8E939B;" target=3D"_blank" href=3D"https://hh.ru/ar=
+ticle/27258?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmi=
+sc_app_ex_241020&amp;utm_content=3Darticle27258&amp;sent_date=3D2020_10_24&=
+amp;mid=3D13447&amp;id=3D66804029">=D0=9E=D0=B1=D1=8A=D1=8F=D1=81=D0=BD=D1=
+=8F=D0=B5=D0=BC, =D0=BF=D0=BE=D1=87=D0=B5=D0=BC=D1=83 =D0=BD=D0=B5=D0=BA=D0=
+=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=BE=D0=
+=B6=D0=B5=D0=BD=D0=B8=D1=8F =D0=BE&nbsp;=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=
+=B5 =D1=81=D0=BB=D0=B8=D1=88=D0=BA=D0=BE=D0=BC =D0=B4=D0=BE=D0=BB=D0=B3=D0=
+=BE =D0=BE=D1=81=D1=82=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=BD=D0=B0&nbsp;=D1=
+=81=D0=B0=D0=B9=D1=82=D0=B5 =D0=B8=D0=BB=D0=B8 =D1=87=D0=B0=D1=81=D1=82=D0=
+=BE =D0=BF=D0=BE=D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D1=81=D0=
+=BD=D0=BE=D0=B2=D0=B0.</a></p></td></tr></table></td><!--[if !mso]><!--></t=
+r></table></td><!--<![endif]--></tr></table></td></tr></table></td></tr></t=
+able></td></tr><!-- /=D0=A2=D0=B5=D0=BA=D1=81=D1=82 --></table></td></tr></=
+table></div><!--/BODY--><!--NAV--><table style=3D"width:100%;background:#33=
+3333;" width=3D"100%" bgcolor=3D"#333333" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" align=3D"center"><tr><td style=3D"vertical-align:top;backgr=
+ound:#333333;" valign=3D"top" align=3D"left"><div style=3D"width:100%;max-w=
+idth:660px;margin:0 auto;" class=3D"device-width"><!--[if mso]>
+                              <table width=3D"660" style=3D"width:660px;" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+                              <![endif]--><!--[if !mso]><!--><table style=
+=3D"width:100%;" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center"><!--<![endif]--><tr><td class=3D"" style=3D"padding=
+:16px 20px 8px;vertical-align:top;color:#ffffff;font:14px/16px Arial, sans-=
+serif;" valign=3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" align=3D"left" style=3D"text-align:left;" width=3D"100%"><tbody><tr><td=
+ style=3D"padding:0;vertical-align:top;" valign=3D"top"><!--[if !mso]><!-->=
+<table class=3D"nav" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"left" style=3D"text-align:left;"><tbody><tr><td style=3D"padding:0;vert=
+ical-align:top;" valign=3D"top"><!--<![endif]--><table class=3D"nav-item" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" style=3D"tex=
+t-align:left;"><tbody><tr><td style=3D"padding:0 20px 10px 0;vertical-align=
+:middle;text-align:left;color:#ffffff;" valign=3D"middle"><a class=3D"nav-i=
+tem__text" style=3D"font:14px/16px Arial, sans-serif;color:#ffffff;text-dec=
+oration:none;" href=3D"https://hh.ru/search/vacancy/advanced?utm_source=3De=
+mail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241020&amp;sent_=
+date=3D2020_10_24&amp;utm_content=3Dsearch_vacancy" target=3D"_blank">=D0=
+=9F=D0=BE=D0=B8=D1=81=D0=BA&nbsp;=D0=B2=D0=B0=D0=BA=D0=B0=D0=BD=D1=81=D0=B8=
+=D0=B9</a></td></tr></tbody></table><table class=3D"nav-item" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" align=3D"left" style=3D"text-align:left=
+;"><tbody><tr><td class=3D"nav-item__inner" style=3D"padding:0 20px 10px 0;=
+vertical-align:middle;text-align:left;color:#ffffff;" valign=3D"middle"><a =
+class=3D"nav-item__text" style=3D"font:14px/16px Arial, sans-serif;color:#f=
+fffff;text-decoration:none;" href=3D"https://hh.ru/applicant/negotiations?u=
+tm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex_241=
+020&amp;sent_date=3D2020_10_24&amp;utm_content=3Dnegotiations" target=3D"_b=
+lank">=D0=9C=D0=BE=D0=B8&nbsp;=D0=BE=D1=82=D0=BA=D0=BB=D0=B8=D0=BA=D0=B8</a=
+></td></tr></tbody></table><!--[if !mso]><!--></td></tr></tbody></table><ta=
+ble class=3D"nav" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D=
+"left" style=3D"text-align:left;"><tbody><tr><td style=3D"padding:0;vertica=
+l-align:top;" valign=3D"top"><!--<![endif]--><table class=3D"nav-item" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" style=3D"text-a=
+lign:left;"><tbody><tr><td style=3D"padding:0 20px 10px 0;vertical-align:mi=
+ddle;text-align:left;color:#ffffff;" valign=3D"middle"><a class=3D"nav-item=
+__text" style=3D"font:14px/16px Arial, sans-serif;color:#ffffff;text-decora=
+tion:none;" href=3D"https://hh.ru/mobile?from=3Ddg_m_2020_10_24" target=3D"=
+_blank">=D0=9C=D1=8B&nbsp;=D0=BD=D0=B0&nbsp;=D0=BC=D0=BE=D0=B1=D0=B8=D0=BB=
+=D1=8C=D0=BD=D1=8B=D1=85</a></td></tr></tbody></table><table class=3D"nav-i=
+tem" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" style=
+=3D"text-align:left;"><tbody><tr><td class=3D"nav-item__inner" style=3D"pad=
+ding:0 0 10px 0;vertical-align:middle;text-align:left;color:#ffffff;" valig=
+n=3D"middle"><a class=3D"nav-item__text" style=3D"font:14px/16px Arial, san=
+s-serif;color:#ffffff;text-decoration:none;" href=3D"https://hh.ru/applican=
+t/services?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmis=
+c_app_ex_241020&amp;sent_date=3D2020_10_24&amp;utm_content=3Dservices" targ=
+et=3D"_blank">=D0=9F=D1=80=D0=BE=D0=B4=D0=B2=D0=B8=D0=B6=D0=B5=D0=BD=D0=B8=
+=D0=B5 =D1=80=D0=B5=D0=B7=D1=8E=D0=BC=D0=B5</a></td></tr></tbody></table><!=
+--[if !mso]><!--></td></tr></tbody></table><!--<![endif]--></td></tr></tbod=
+y></table></td></tr></table></div></td></tr></table><!--/NAV--><!--FOOTER--=
+><table style=3D"width:100%;background:#eeeeee;" width=3D"100%" bgcolor=3D"=
+#eeeeee" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">=
+<tr><td style=3D"vertical-align:top;background:#eeeeee;" valign=3D"top" ali=
+gn=3D"left"><div style=3D"width:100%;max-width:660px;margin:0 auto;" class=
+=3D"device-width"><!--[if mso]>
+                                <table width=3D"660" style=3D"width:660px;"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+                                <![endif]--><!--[if !mso]><!--><table width=
+=3D"100%" style=3D"width:100%;" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center"><!--<![endif]--><tr><td class=3D"l-layout" style=3D=
+"padding:30px 20px 67px;vertical-align:top;" valign=3D"top"><table style=3D=
+"width:100%;" class=3D"device-clear" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" align=3D"center"><tr><td style=3D"padding:0 0 23px;vertical-alig=
+n:top;color:#333333;font:14px/22px Arial, sans-serif;" valign=3D"top">
+                                          =D0=91=D1=83=D0=B4=D1=8C=D1=82=D0=
+=B5 =D0=BE=D1=81=D1=82=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D1=8B =D0=BF=D1=80=D0=
+=B8 =D0=BF=D0=B5=D1=80=D0=B5=D1=81=D1=8B=D0=BB=D0=BA=D0=B5 =D1=8D=D1=82=D0=
+=BE=D0=B3=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0: =D0=B2=D1=81=D0=B5 =
+=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8 =D0=B2=D0=B5=D0=B4=D1=83=D1=82 =D0=B2&=
+nbsp;=D0=B2=D0=B0=D1=88 =D0=BB=D0=B8=D1=87=D0=BD=D1=8B=D0=B9 =D0=BA=D0=B0=
+=D0=B1=D0=B8=D0=BD=D0=B5=D1=82.
+                                        </td></tr><tr><td style=3D"padding:=
+0 0 32px;vertical-align:top;color:#333333;font:14px/22px Arial, sans-serif;=
+" valign=3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" al=
+ign=3D"left" style=3D"text-align:left;" width=3D"100%"><tbody><tr><td style=
+=3D"padding:0;vertical-align:top;" valign=3D"top"><table class=3D"nav" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" style=3D"text-a=
+lign:left;"><tbody><tr><td style=3D"padding:0 0 4px 0;vertical-align:middle=
+;text-align:left;color:#ffffff;" valign=3D"middle"><a style=3D"font:14px/22=
+px Arial, sans-serif;text-decoration:none;color:#0096ff;" href=3D"https://h=
+h.ru/unsubscribe/51dc01e9-0e5c-4393-b0fa-fd56cf92e52b?date=3D2020-10-24&t=
+=3Dhhapplicant_digest&s=3D298f2cff8a74e0f70af81b2413460be38a242d392de912112=
+5699983ad0451cf&amp;utm_medium=3Demail&amp;utm_source=3Demail&amp;utm_campa=
+ign=3Dmisc_app_ex_241020&amp;sent_date=3D2020_10_24&amp;utm_content=3Dunsub=
+scribe" target=3D"_blank">=D0=A3=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=
+=D0=B8=D0=B5 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=BE=D0=B9</a></td=
+></tr><tr><td style=3D"padding:0 20px 0 0;vertical-align:middle;text-align:=
+left;color:#ffffff;" valign=3D"middle"><a style=3D"font:14px/22px Arial, sa=
+ns-serif;text-decoration:none;color:#0096ff;" href=3D"https://feedback.hh.r=
+u/?utm_source=3Demail&amp;utm_medium=3Demail&amp;utm_campaign=3Dmisc_app_ex=
+_241020&amp;sent_date=3D2020_10_24&amp;utm_content=3Dfeedback" target=3D"_b=
+lank">=D0=92=D0=BE=D0=BF=D1=80=D0=BE=D1=81=D1=8B =D0=B8&nbsp;=D0=BE=D1=82=
+=D0=B2=D0=B5=D1=82=D1=8B</a></td></tr></tbody></table></td></tr></tbody></t=
+able></td></tr><tr><td class=3D"footer-row" style=3D"vertical-align:top;col=
+or:#333333;font:14px/22px Arial, sans-serif;" valign=3D"top"><!--[if mso]>
+                                              <table width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                  <td width=3D"330" valign=
+=3D"top">
+                                              <![endif]--><span class=3D"fo=
+oter-row__item" style=3D"display:inline-block;vertical-align: top;width: 10=
+0%;max-width: 330px;"><table class=3D"footer-row__table adaptive-col" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left"><=
+tbody class=3D"footer-row__body"><tr><td class=3D"" style=3D"padding:0 0 30=
+px;vertical-align:top;text-align: left;" valign=3D"top"><!-- =D0=A1=D0=BE=
+=D1=86. =D1=81=D0=B5=D1=82=D0=B8 --><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" align=3D"left" style=3D"text-align:left;"><tbody><tr><td s=
+tyle=3D"padding:0 10px 0 0;vertical-align:middle;text-align:left;" valign=
+=3D"middle"><a style=3D"text-decoration:none;" href=3D"https://vk.com/headh=
+unter" target=3D"_blank"><img src=3D"https://hhcdn.ru/icms/10115345.png" bo=
+rder=3D"0" style=3D"vertical-align:top;border:none !important;width: 40px !=
+important;max-width:40px !important;" width=3D"40" alt=3D""></a></td><td st=
+yle=3D"padding:0 10px 0 0;vertical-align:middle;text-align:left;" valign=3D=
+"middle"><a style=3D"text-decoration:none;" href=3D"https://www.facebook.co=
+m/headhuntergroup" target=3D"_blank"><img src=3D"https://hhcdn.ru/icms/1011=
+5346.png" border=3D"0" style=3D"vertical-align:top;border:none !important;w=
+idth: 40px !important;max-width:40px !important;" width=3D"40" alt=3D""></a=
+></td><td style=3D"padding:0 10px 0 0;vertical-align:middle;text-align:left=
+;" valign=3D"middle"><a style=3D"text-decoration:none;" href=3D"https://www=
+.instagram.com/hh_ru/" target=3D"_blank"><img src=3D"https://hhcdn.ru/icms/=
+10115347.png" border=3D"0" style=3D"vertical-align:top;border:none !importa=
+nt;width: 40px !important;max-width:40px !important;" width=3D"40" alt=3D""=
+></a></td></tr></tbody></table><!-- /=D0=A1=D0=BE=D1=86. =D1=81=D0=B5=D1=82=
+=D0=B8 --></td></tr></tbody></table></span><!--[if mso]>
+                                                </td><td width=3D"290" vali=
+gn=3D"top">
+                                              <![endif]--><span class=3D"fo=
+oter-row__item" style=3D"display:inline-block;vertical-align: top;width: 10=
+0%;max-width: 290px;"><table class=3D"footer-row__table adaptive-col" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"left"><=
+tbody class=3D"footer-row__body"><tr><td class=3D"" style=3D"padding:0 0 30=
+px;vertical-align:top;text-align: left;" valign=3D"top"><!-- =D0=A1=D0=BE=
+=D1=86. =D1=81=D0=B5=D1=82=D0=B8 --><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" align=3D"left" style=3D"text-align:left;"><tbody><tr><td s=
+tyle=3D"padding:0 10px 0 0;vertical-align:middle;text-align:left;" valign=
+=3D"middle"><a style=3D"text-decoration:none;" href=3D"https://hh.ru/mobile=
+?from=3Ddg_b_2020_10_24" target=3D"_blank"><img src=3D"https://hhcdn.ru/icm=
+s/10199320.png" border=3D"0" style=3D"vertical-align:middle;border:none !im=
+portant;width: 140px !important;max-width:140px !important;" width=3D"140" =
+alt=3D""></a></td><td style=3D"padding:0 10px 0 0;vertical-align:middle;tex=
+t-align:left;" valign=3D"middle"><a style=3D"text-decoration:none;" href=3D=
+"https://hh.ru/mobile?from=3Ddg_b_2020_10_24" target=3D"_blank"><img src=3D=
+"https://hhcdn.ru/icms/10199319.png" border=3D"0" style=3D"vertical-align:m=
+iddle;border:none !important;width: 140px !important;max-width:140px !impor=
+tant;" width=3D"140" alt=3D""></a></td></tr></tbody></table><!-- /=D0=A1=D0=
+=BE=D1=86. =D1=81=D0=B5=D1=82=D0=B8 --></td></tr></tbody></table></span><!-=
+-[if mso]>
+                                              </td>
+                                              </tr>
+                                              </table>
+                                              <![endif]--></td></tr><tr><td=
+ class=3D"" style=3D"padding:23px 0 0;vertical-align:top;border-top:1px sol=
+id #cccccc;color:#333333;font:14px/22px Arial, sans-serif;" valign=3D"top">=
+<p>=D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D0=BB=D0=B8 =D1=8D=D1=
+=82=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE, =D0=BF=D0=BE=D1=81=D0=BA=D0=
+=BE=D0=BB=D1=8C=D0=BA=D1=83 =D0=B7=D0=B0=D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=
+=82=D1=80=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D1=8B =D0=BD=D0=B0 hh.ru</p><=
+p>&copy;&nbsp;=D0=93=D1=80=D1=83=D0=BF=D0=BF=D0=B0 =D0=BA=D0=BE=D0=BC=D0=BF=
+=D0=B0=D0=BD=D0=B8=D0=B9 HeadHunter, 2000&ndash;2020</p></td></tr></table><=
+/td></tr></table></div></td></tr></table><!--/FOOTER--></td></tr></table></=
+div></td></tr><!--=D0=A0=D0=B0=D1=81=D1=82=D1=8F=D0=B6=D0=BA=D0=B0 =D0=B4=
+=D0=BB=D1=8F outlook--><tr><td style=3D"padding:0 300px 0 0"></td></tr><!--=
+/=D0=A0=D0=B0=D1=81=D1=82=D1=8F=D0=B6=D0=BA=D0=B0 =D0=B4=D0=BB=D1=8F outloo=
+k--></table><!--/wrapper--></body></html>

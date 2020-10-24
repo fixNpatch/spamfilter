@@ -15,7 +15,7 @@ type Mail_ struct {
 	Address        Address
 	NominalAddress NominalAddress
 	Headers        Headers
-	Body           Body
+	BodyParts      []string
 }
 
 type Address struct {
@@ -25,7 +25,7 @@ type Address struct {
 
 type NominalAddress struct {
 	From string
-	TO   string
+	To   string
 }
 
 type Headers struct {
@@ -35,33 +35,31 @@ type Headers struct {
 
 	MIME string
 
+	DKIMSignature []string
+
 	AuthenticationResults string
 	ReceivedSPF           string
+
+	ReplyTo   string
+	InReplyTo string
 
 	XHeaders
 }
 
+// X-Заголовки не являются стандартными. В письме они могут быть указаны как угодно, могут быть новыми.
+// Поэтому выделено наиболее часто употребимые
 type XHeaders struct {
-	XConfirmReadingTo string
+	XConfirmReadingTo string // запрашивает автоматическое подтверждение того, что письмо было получено или прочитано. Предполагается соответствующая реакция почтовой программы, но обычно он игнорируется.
 	XErrorsTo         string
 	XMailer           string
 	XSender           string
 	XPriority         string
+	XSpam             string
 	XUIDL             string
 }
 
-type Body struct {
-	string
-}
-
-
 func returnValue(input string) (string, error) {
 	// основанно на следующем знании: https://dmorgan.info/posts/encoded-word-syntax/
-
-	// python version
-	// encoded_word_regex = r'=\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}='
-	// charset, encoding, encoded_text = re.match(encoded_word_regex, encoded_words).groups()
-
 
 	// регулярное выражение для определения кодировки в поле письма
 	regular := regexp.MustCompile(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`)
@@ -69,7 +67,6 @@ func returnValue(input string) (string, error) {
 	charst, encodng, encodtxt := splitted[1], splitted[2], splitted[3]
 
 	_ = encodng + charst // заглушка
-
 
 	// декодирование по выбранной кодировке (пока сделано только для base64)
 	decoded, err := b64.StdEncoding.DecodeString(encodtxt)
@@ -106,7 +103,6 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 	// получаем "грязные" строки, то есть некоторые заголовки являются многострочными.
 	// Надо сделать 1 заголовок = 1 строка
 
-
 	// "Очистка" данных
 	for _, line := range rawLineArray {
 
@@ -119,10 +115,9 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 			return fmt.Errorf("Error:Cant parse file::Bad input")
 		}
 
-
 		if !match {
-			modifiedLineArray[len(modifiedLineArray) - 1] =
-				strings.TrimRight(string(modifiedLineArray[len(modifiedLineArray) - 1]) +
+			modifiedLineArray[len(modifiedLineArray)-1] =
+				strings.TrimRight(string(modifiedLineArray[len(modifiedLineArray)-1])+
 					strings.ReplaceAll(line, "\t", ""), "\r\n")
 		} else {
 			matched := strings.TrimRight(line, "\r\n")
@@ -131,12 +126,10 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 
 	}
 
-
 	var clearLine string
 
 	// распаковка данных по структуре Mail (сопоставление заголовков с данными)
 	for _, line := range modifiedLineArray {
-
 
 		// проверяем есть декодированные части в очередной рассматриваемой строке
 		match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, line)
@@ -146,7 +139,7 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		}
 		if match { // если есть закодированные части, то необходимо раскодировать каждую из них
 			sublines := strings.Split(line, " ") // берем разделение по пробелам
-			for _, subline := range sublines { // рассматриваем каждую из частей
+			for _, subline := range sublines {   // рассматриваем каждую из частей
 				// если взята закодированная часть, то декодируем её и результат добавляем в результирующую строку
 				if match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, subline); err == nil && match {
 					tmp, err := returnValue(subline)
@@ -162,33 +155,56 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 			line = clearLine // заменяем оригинальную строку результирующей.
 		}
 
-
 		if len(line) >= 15 && line[:12] == "Delivered-To" {
-			m.NominalAddress.TO = line[14:]
+			m.NominalAddress.To = line[14:]
+		}
+
+		if len(line) >= 5 && line[:2] == "To" {
+			m.Address.To = line[4:]
 		}
 
 		if len(line) >= 14 && line[:11] == "Return-path" {
 			m.NominalAddress.From = line[13:]
 		}
 
-		if len(line) >= 25 && line[:22] == "Authentication-Results" {
-			m.Address.From = line[24:]
-		}
-
 		if len(line) >= 7 && line[:4] == "From" {
 			m.Address.From = line[6:]
 		}
 
-		if len(line) >= 5 && line[:2] == "From" {
-			m.Address.From = line[4:]
+		if len(line) >= 25 && line[:22] == "Authentication-Results" {
+			m.Headers.AuthenticationResults = line[24:]
 		}
 
-		if len(line) >= 12 && line[:10] == "Message-ID" {
-			m.Headers.MessageId = line[11:]
+		if len(line) >= 15 && line[:12] == "Received-SPF" {
+			m.Headers.ReceivedSPF = line[14:]
 		}
 
-		if len(line) >=9 && line[:7] == "Subject" {
-			m.Headers.Subject = line[8:]
+		if len(line) >= 11 && line[:8] == "Received" {
+			m.Address.From = line[10:]
+		}
+
+		if len(line) >= 13 && line[:10] == "Message-ID" {
+			m.Headers.MessageId = line[12:]
+		}
+
+		if len(line) >= 10 && line[:7] == "Subject" {
+			m.Headers.Subject = line[9:]
+		}
+
+		if len(line) >= 17 && line[:14] == "DKIM-Signature" {
+			m.Headers.DKIMSignature = append(m.Headers.DKIMSignature, line[16:])
+		}
+
+		if len(line) >= 7 && line[:4] == "Date" {
+			m.Headers.Date = line[6:]
+		}
+
+		if len(line) >= 11 && line[:8] == "Reply-To" {
+			m.Headers.ReplyTo = line[10:]
+		}
+
+		if len(line) >= 14 && line[:11] == "In-Reply-To" {
+			m.Headers.ReplyTo = line[13:]
 		}
 
 		fmt.Println(line)
@@ -197,4 +213,3 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 
 	return nil
 }
-
