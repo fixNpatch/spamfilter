@@ -1,4 +1,4 @@
-Delivered-To: titov.ant.workmail@gmail.com
+Delivered-To: titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com titov.ant.workmail@gmail.com
 Received: by 10.107.47.152 with SMTP id v24csp6663494iov;
         Tue, 26 Dec 2017 11:38:17 -0800 (PST)
 X-Google-Smtp-Source: ACJfBouxXYlb5nQmeiu+YyARuRrSf//tQ+/7Kpvc2c8KYjm42FVtxw3rg5EFKqNlXsmtjIxfU1Sp
@@ -27,7 +27,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@sape.ru header.s=dkim header.b=nBjHz/yd;
        spf=pass (google.com: domain of noreply@sape.ru designates 185.12.124.3 as permitted sender) smtp.mailfrom=noreply@sape.ru;
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sape.ru
-Return-Path: <noreply@sape.ru>
+Return-Path:
 Received: from onlymail.qwarta.ru (onlymail.qwarta.ru. [185.12.124.3])
         by mx.google.com with ESMTPS id r84si674948lff.420.2017.12.26.11.38.17
         for <titov.ant.workmail@gmail.com>
@@ -46,7 +46,7 @@ To: titov.ant.workmail@gmail.com
 Subject: Выбери свой новогодний 🎁
 Precedence: bulk
 List-ID: <new_year_2018>
-List-Unsubscribe: <http://passport.sape.ru/account/unsubscribe/?code=D1E95B73874A4D19EA8AA2FA0488893C61DDCD1C650FBF7254B97BF07AB63E4B>
+List-Unsubscribe: <http://passport.sape.ru/account/unsubscribe/?code=>
 MIME-Version: 1.0
 Content-Type: text/html; charset=utf-8;
 Content-Transfer-Encoding: base64

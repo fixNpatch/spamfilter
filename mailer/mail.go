@@ -163,7 +163,7 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 			m.Address.To = line[4:]
 		}
 
-		if len(line) >= 14 && line[:11] == "Return-path" {
+		if len(line) >= 14 && line[:11] == "Return-Path" {
 			m.NominalAddress.From = line[13:]
 		}
 
@@ -206,8 +206,6 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		if len(line) >= 14 && line[:11] == "In-Reply-To" {
 			m.Headers.ReplyTo = line[13:]
 		}
-
-		fmt.Println(line)
 
 	}
 
