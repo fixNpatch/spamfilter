@@ -28,12 +28,12 @@ func main() {
 	}
 
 	MyEmail = "titov.ant.workmail@gmail.com"
-	//fmt.Println("Введите свой email (будет использован для проверки)")
-	//_, err := fmt.Scanf("%s\n", &MyEmail)
-	//if err != nil {
-	//	fmt.Println(err)
-	//	return
-	//}
+	fmt.Println("Введите свой email (будет использован для проверки)")
+	_, err = fmt.Scanf("%s\n", &MyEmail)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 
 	// Смотрим наличие файлов во входящих
 	files, err := ioutil.ReadDir(mailer.Inbox)
@@ -56,9 +56,8 @@ func main() {
 
 			m := new(mailer.Mail_)
 
-			fmt.Println(file.Name()) // Выводим имя рассматриваемого файла
-			filter(file, m)          // проводим процедуру фильтрации
-			fmt.Println("\n\n")      // делаем отступ в консоли
+			filter(file, m)     // проводим процедуру фильтрации
+			fmt.Println("\n\n") // делаем отступ в консоли
 		}
 
 		fmt.Println("Все письма отсортированы")
@@ -79,7 +78,8 @@ func check_headers(m *mailer.Mail_) float64 {
 	// 2. Title(Subject) документа длинней 12 слов или 120 символов.
 	splice = strings.Split(strings.TrimPrefix(m.Headers.Subject, " "), " ")
 	if len(splice) > 12 || len(splice) <= 1 || len(m.Headers.Subject) > 120 {
-		fmt.Println("CAUTION: Проблема с заголовком")
+		fmt.Println("Внимание: Проблема с заголовком")
+		fmt.Println(splice)
 		checkSum += 1.40
 	}
 
@@ -87,7 +87,8 @@ func check_headers(m *mailer.Mail_) float64 {
 
 	splice = strings.Split(strings.TrimPrefix(m.Address.To, " "), " ")
 	if len(splice) > 12 || len(splice) <= 1 || len(m.Headers.Subject) > 120 {
-		fmt.Println("CAUTION: Проблема с получателями")
+		fmt.Println("Внимание: Проблема с получателями")
+		fmt.Println(splice)
 		checkSum += 1.40
 	}
 
@@ -125,7 +126,7 @@ func check_(m *mailer.Mail_) bool {
 	// Признаки в теле письма оцениваются в 2.00
 	// Следовательно необходимо 3/0 или 2/1 или 0/2
 
-	fmt.Println("---------- MAILCHEKER for this mail ---------------")
+	fmt.Println("---------- Проверка данного письма  ---------------")
 
 	checkSum := 0.0
 
@@ -138,76 +139,112 @@ func check_(m *mailer.Mail_) bool {
 	// 0. Заголовок письма
 	splice = strings.Split(strings.TrimPrefix(m.Headers.Subject, " "), " ")
 	if len(splice) > 12 || len(splice) <= 1 || len(m.Headers.Subject) > 120 {
-		fmt.Println("CAUTION: Проблема с заголовком")
+		fmt.Println("Внимание: Проблема с заголовком")
+
+		for i, item := range splice {
+			fmt.Println("\t", i, item)
+		}
+
 		checkSum += 1.40
 	}
 
 	// 1. Обратный адрес Если пустой то +rating
 	if len(m.NominalAddress.From) < 1 {
-		fmt.Println("CAUTION: Проблема с обратным адресом")
+		fmt.Println("Внимание: Проблема с обратным адресом")
+		fmt.Println("\tНе указан или отсутствует заголовок Return-Path")
 		checkSum += 1.40
 	}
 
 	// 2. Получатели: если пустой или их много, то +rating
 	splice = strings.Split(strings.TrimPrefix(m.NominalAddress.To, " "), " ")
-	if len(splice) > 10 || len(splice) < 1 {
-		fmt.Println("CAUTION: Проблема с количеством получателей")
+	if len(splice) > 5 || len(splice) < 1 {
+		fmt.Println("Внимание: Проблема с количеством получателей")
+		fmt.Println("\tКоличество получателей:", len(splice))
+		for i, item := range splice {
+			fmt.Println("\t", i, item)
+		}
 		checkSum += 1.40
 	}
 
 	// 3. Есть ли наш адрес в получателях. Если нет, то +rating
+	splice = strings.Split(strings.TrimPrefix(m.Address.To, " "), " ")
 	found := false
 	for _, addr := range splice {
-		if addr == MyEmail {
+		if len(addr) > 3 && addr[1:len(addr)-1] == MyEmail {
 			found = true
 			break
 		}
 	}
 	if !found {
-		fmt.Println("CAUTION: Проблема с неверно указанным получателем")
+		fmt.Println("Внимание: Проблема с неверно указанным получателем")
+
+		for i, item := range splice {
+			if item != "" {
+				fmt.Println("\t", i, item, "!=", MyEmail)
+			}
+		}
+
 		checkSum += 1.40
 	}
 
 	// 4. Ищем DKIM сигнатуру. Если её нет, то +rating
 	if len(m.Headers.DKIMSignature) < 1 {
-		fmt.Println("CAUTION: Проблема с DKIM")
+		fmt.Println("Внимание: Проблема с DKIM")
+		if len(m.Headers.DKIMSignature) == 0 {
+			fmt.Println("\tПустой заголовок DKIM")
+		}
 		checkSum += 2.00
 	}
 
 	// 5. Reply-To. Если пустой то +rating
 	if len(m.Headers.ReplyTo) < 1 {
-		fmt.Println("CAUTION: Проблема с Reply-To")
+		fmt.Println("Внимание: Проблема с Reply-To")
+		if m.Headers.ReplyTo == "" {
+			fmt.Println("\tОтсутствует заголовок Reply-To")
+		}
 		checkSum += 1.40
 	}
 
 	// 6. In-Reply-To. Если пустой то +rating
 	if len(m.Headers.InReplyTo) < 1 {
-		fmt.Println("CAUTION: Проблема с In-Reply-To")
+		fmt.Println("Внимание: Проблема с In-Reply-To")
+		if m.Headers.InReplyTo == "" {
+			fmt.Println("\tОтсутствует заголовок In-Reply-To")
+		}
 		checkSum += 1.00
 	}
 
 	// 7. Message-ID. Если пустой то +rating
 	if len(m.Headers.MessageId) < 1 {
-		fmt.Println("CAUTION: Проблема с Message-Id")
+		fmt.Println("Внимание: Проблема с Message-Id")
+		if m.Headers.MessageId == "" {
+			fmt.Println("\tОтсутствует заголовок Message-Id")
+		}
 		checkSum += 1.40
 	}
 
 	// 8. Received-SPF. Если пустой то +rating
 	if len(m.Headers.ReceivedSPF) < 1 {
-		fmt.Println("CAUTION: Проблема с Received-SPF")
+		fmt.Println("Внимание: Проблема с Received-SPF")
+		if m.Headers.ReceivedSPF == "" {
+			fmt.Println("\tОтсутствует заголовок Received-SPF")
+		}
 		checkSum += 1.40
 	}
 
 	if checkSum < 2.0 {
-		fmt.Println("Письмо точно не спам")
+		fmt.Println("---------------------------------------------------")
+		fmt.Println("\t\tПисьмо точно не спам")
 		fmt.Println("---------------------------------------------------")
 		return false
 	} else if checkSum < 4.0 {
-		fmt.Println("Письмо скорее всего не спам")
+		fmt.Println("---------------------------------------------------")
+		fmt.Println("\t\tПисьмо скорее всего не спам")
 		fmt.Println("---------------------------------------------------")
 		return false
 	} else {
-		fmt.Println("Обнаружен спам!")
+		fmt.Println("---------------------------------------------------")
+		fmt.Println("\t\tОбнаружен спам!")
 		fmt.Println("---------------------------------------------------")
 		return true
 	}

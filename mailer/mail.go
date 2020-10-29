@@ -18,11 +18,13 @@ type Mail_ struct {
 	BodyParts      []string
 }
 
+// Указательный адрес. Можем писать туда что угодно. Для удобства пользователей
 type Address struct {
 	From string
 	To   string
 }
 
+// Конвертный адрес. То, что нужно, чтобы доставить письмо. Технически важен
 type NominalAddress struct {
 	From string
 	To   string
@@ -109,7 +111,7 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 		// если lineArray[index] содержит заголовок (проверяем при помощи regexp)
 		// то добавляем эту строку к последнему заголовку
 
-		match, err := regexp.MatchString("^[A-Z].[a-zA-Z-0-9]+:", line)
+		match, err := regexp.MatchString("^[A-Z][a-zA-Z-0-9]+:", line)
 		if err != nil {
 			fmt.Println("Error::Something wrong with your Regexp")
 			return fmt.Errorf("Error:Cant parse file::Bad input")
@@ -131,6 +133,7 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 	// распаковка данных по структуре Mail (сопоставление заголовков с данными)
 	for _, line := range modifiedLineArray {
 
+		clearLine = ""
 		// проверяем есть декодированные части в очередной рассматриваемой строке
 		match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, line)
 		if err != nil {
@@ -147,64 +150,67 @@ func (m *Mail_) Parser(info os.FileInfo) error {
 						fmt.Println(err)
 						return err
 					}
-					clearLine += tmp + " "
+					clearLine += strings.TrimSuffix(tmp, " ") + " "
 				} else { // если часть не закодированна, то просто добавляем её в результат
 					clearLine += subline + " "
 				}
 			}
-			line = clearLine // заменяем оригинальную строку результирующей.
 		}
 
-		if len(line) >= 15 && line[:12] == "Delivered-To" {
-			m.NominalAddress.To = line[14:]
+		if clearLine == "" {
+			clearLine = line
 		}
 
-		if len(line) >= 5 && line[:2] == "To" {
-			m.Address.To = line[4:]
+		if len(clearLine) >= 15 && strings.ToLower(clearLine[:12]) == "delivered-to" {
+			m.NominalAddress.To = clearLine[14:]
 		}
 
-		if len(line) >= 14 && line[:11] == "Return-Path" {
-			m.NominalAddress.From = line[13:]
+		if len(clearLine) >= 5 && strings.ToLower(clearLine[:2]) == "to" {
+			m.Address.To = clearLine[4:]
 		}
 
-		if len(line) >= 7 && line[:4] == "From" {
-			m.Address.From = line[6:]
+		if len(clearLine) >= 14 && strings.ToLower(clearLine[:11]) == "return-path" {
+			m.NominalAddress.From = clearLine[13:]
 		}
 
-		if len(line) >= 25 && line[:22] == "Authentication-Results" {
-			m.Headers.AuthenticationResults = line[24:]
+		if len(clearLine) >= 7 && strings.ToLower(clearLine[:4]) == "from" {
+			m.Address.From = clearLine[6:]
 		}
 
-		if len(line) >= 15 && line[:12] == "Received-SPF" {
-			m.Headers.ReceivedSPF = line[14:]
+		if len(clearLine) >= 25 && strings.ToLower(clearLine[:22]) == "authentication-results" {
+			m.Headers.AuthenticationResults = clearLine[24:]
 		}
 
-		if len(line) >= 11 && line[:8] == "Received" {
-			m.Address.From = line[10:]
+		if len(clearLine) >= 15 && strings.ToLower(clearLine[:12]) == "received-spf" {
+			m.Headers.ReceivedSPF = clearLine[14:]
 		}
 
-		if len(line) >= 13 && line[:10] == "Message-ID" {
-			m.Headers.MessageId = line[12:]
+		if len(clearLine) >= 11 && strings.ToLower(clearLine[:8]) == "received" {
+			m.Address.From = clearLine[10:]
 		}
 
-		if len(line) >= 10 && line[:7] == "Subject" {
-			m.Headers.Subject = line[9:]
+		if len(clearLine) >= 13 && strings.ToLower(clearLine[:10]) == "message-id" {
+			m.Headers.MessageId = clearLine[12:]
 		}
 
-		if len(line) >= 17 && line[:14] == "DKIM-Signature" {
-			m.Headers.DKIMSignature = append(m.Headers.DKIMSignature, line[16:])
+		if len(clearLine) >= 10 && strings.ToLower(clearLine[:7]) == "subject" {
+			m.Headers.Subject = clearLine[9:]
 		}
 
-		if len(line) >= 7 && line[:4] == "Date" {
-			m.Headers.Date = line[6:]
+		if len(clearLine) >= 17 && strings.ToLower(clearLine[:14]) == "dkim-signature" {
+			m.Headers.DKIMSignature = append(m.Headers.DKIMSignature, clearLine[16:])
 		}
 
-		if len(line) >= 11 && line[:8] == "Reply-To" {
-			m.Headers.ReplyTo = line[10:]
+		if len(clearLine) >= 7 && strings.ToLower(clearLine[:4]) == "date" {
+			m.Headers.Date = clearLine[6:]
 		}
 
-		if len(line) >= 14 && line[:11] == "In-Reply-To" {
-			m.Headers.ReplyTo = line[13:]
+		if len(clearLine) >= 11 && strings.ToLower(clearLine[:8]) == "reply-to" {
+			m.Headers.ReplyTo = clearLine[10:]
+		}
+
+		if len(clearLine) >= 14 && strings.ToLower(clearLine[:11]) == "in-reply-to" {
+			m.Headers.InReplyTo = clearLine[13:]
 		}
 
 	}
