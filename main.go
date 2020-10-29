@@ -2,44 +2,178 @@ package main
 
 import (
 	"fmt"
+	"github.com/pkg/errors"
 	"io/ioutil"
-	"log"
 	"os"
+	"spamfilter/configurator"
 	"spamfilter/mailer"
 	"strings"
 )
 
+var cfg configurator.Config
+
 var MyEmail string
-var CurrentDir string
 var ListOfMails []string
 
-const Inbox = "\\mail\\inbox"
-const SpamBox = "\\mail\\bad"
-const ClearBox = "\\mail\\good"
+var AbsoluteInbox, AbsoluteGood, AbsoluteSpam string
+
+// Загрузка настроек
+func configCheck(cfg *configurator.Config) (bool, error) {
+	var err error
+	if cfg.IsUsed {
+		fmt.Println("Были найдены настроки")
+		fmt.Println("Входящие:\t", cfg.InboxPath)
+		fmt.Println("НеСпам:\t\t", cfg.FilteredPath)
+		fmt.Println("Спам:\t\t", cfg.SpamPath)
+		fmt.Println("Получатель:\t", cfg.TargetEmail)
+		if len(cfg.ListOfMails) < 1 {
+			fmt.Println("Список получателей не установлен")
+		} else {
+			fmt.Println("Список получателей:")
+			for i, item := range cfg.ListOfMails {
+				fmt.Println("\t", i, item)
+			}
+		}
+
+		var changeCommand string
+		for true {
+			fmt.Println("Хотите изменить настройки? (y/N)")
+			_, err = fmt.Scanf("%s\n", &changeCommand)
+			if err != nil {
+				fmt.Println(err)
+				return false, err
+			}
+			if strings.ToLower(changeCommand) == "y" {
+				return true, nil
+			} else if strings.ToLower(changeCommand) == "n" {
+				return false, nil
+			} else {
+				fmt.Println("Некорректный ввод. Пожалуйста введите символ Y(да) либо N(нет)")
+				continue
+			}
+		}
+	}
+	return false,
+		errors.New("ВНИМАНИЕ: Вы попали на участок кода, непредусмотренный алгоритмом. Свяжитесь с разработчиком")
+}
+
+// Сохранение настроек
+func configSave(cfg *configurator.Config, master *configurator.Configurator) error {
+	var err error
+	var readyCheck string
+	var ready bool
+	for true {
+
+		fmt.Println("Выбрано действие редактирования конфигурации =>\n" +
+			"Если не требуется изменений, оставляйте пустую строку и нажимайте Enter.")
+
+		fmt.Println("Введите свой email (будет использован для проверки).")
+		if _, err = fmt.Scanf("%s\n", &MyEmail); err != nil {
+			fmt.Println(err)
+			return err
+		}
+		if MyEmail == "" {
+			MyEmail = cfg.TargetEmail
+		}
+
+		fmt.Println("Укажите абсолютный путь до директории входящих Email")
+		if _, err = fmt.Scanf("%s\n", &AbsoluteInbox); err != nil {
+			fmt.Println(err)
+			return err
+		}
+		if AbsoluteInbox == "" {
+			AbsoluteInbox = cfg.InboxPath
+		}
+
+		fmt.Println("Укажите абсолютный путь до директории отфильтрованных сообщений")
+		if _, err = fmt.Scanf("%s\n", &AbsoluteGood); err != nil {
+			fmt.Println(err)
+			return err
+		}
+		if AbsoluteGood == "" {
+			AbsoluteGood = cfg.FilteredPath
+		}
+
+		fmt.Println("Укажите абсолютный путь до директории спам-писем")
+		if _, err = fmt.Scanf("%s\n", &AbsoluteSpam); err != nil {
+			fmt.Println(err)
+			return err
+		}
+		if AbsoluteSpam == "" {
+			AbsoluteSpam = cfg.SpamPath
+		}
+
+		ready = false
+		fmt.Println("Всё верно? (Y/n)")
+		for true {
+			if _, err = fmt.Scanf("%s\n", &readyCheck); err != nil {
+				fmt.Println(err)
+				return err
+			}
+			if strings.ToLower(readyCheck) == "y" {
+				ready = true
+				break
+			} else if strings.ToLower(readyCheck) == "n" {
+				break
+			} else {
+				fmt.Println("Некорректный ввод. Пожалуйста введите символ Y(да) либо N(нет)")
+			}
+		}
+		if !ready {
+			continue
+		}
+
+		newCfg := configurator.Config{
+			IsUsed:       true,
+			InboxPath:    AbsoluteInbox,
+			FilteredPath: AbsoluteGood,
+			SpamPath:     AbsoluteSpam,
+			TargetEmail:  MyEmail,
+			ListOfMails:  ListOfMails,
+		}
+
+		err = master.SetConfig(&newCfg)
+		if err != nil {
+			fmt.Println(err)
+			return err
+		}
+		break
+	}
+	return nil
+}
 
 func main() {
 	var err error
 	fmt.Println(">> Фильтр запущен <<")
 
-	CurrentDir, err = os.Getwd()
+	configMaster := new(configurator.Configurator)
+
+	cfg, err = configMaster.GetConfig()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	MyEmail = "titov.ant.workmail@gmail.com"
-	fmt.Println("Введите свой email (будет использован для проверки)")
-	_, err = fmt.Scanf("%s\n", &MyEmail)
-	if err != nil {
-		fmt.Println(err)
-		return
+	if !cfg.IsUsed {
+		err = configSave(&cfg, configMaster)
+	} else {
+		changeFlag, err := configCheck(&cfg)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		if changeFlag {
+			err = configSave(&cfg, configMaster)
+		}
 	}
 
 	// Смотрим наличие файлов во входящих
-	files, err := ioutil.ReadDir(mailer.Inbox)
+	files, err := ioutil.ReadDir(cfg.InboxPath)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
+		return
 	}
+
 	// если есть файлы в рассматриваемой выше директории, то...
 	if len(files) > 0 {
 
@@ -170,7 +304,7 @@ func check_(m *mailer.Mail_) bool {
 	splice = strings.Split(strings.TrimPrefix(m.Address.To, " "), " ")
 	found := false
 	for _, addr := range splice {
-		if len(addr) > 3 && addr[1:len(addr)-1] == MyEmail {
+		if len(addr) > 3 && addr[1:len(addr)-1] == cfg.TargetEmail {
 			found = true
 			break
 		}
@@ -180,7 +314,7 @@ func check_(m *mailer.Mail_) bool {
 
 		for i, item := range splice {
 			if item != "" {
-				fmt.Println("\t", i, item, "!=", MyEmail)
+				fmt.Println("\t", i, item, "!=", cfg.TargetEmail)
 			}
 		}
 
@@ -253,7 +387,7 @@ func check_(m *mailer.Mail_) bool {
 func filter(info os.FileInfo, m *mailer.Mail_) {
 	fmt.Println("Найдено новое письмо:", info.Name())
 
-	err := m.Parser(info) // Распределяем данные по структуре письма
+	err := m.Parser(info, &cfg) // Распределяем данные по структуре письма
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -263,13 +397,13 @@ func filter(info os.FileInfo, m *mailer.Mail_) {
 	action := check_(m) // Производим проверку
 
 	if action {
-		err = os.Rename(CurrentDir+Inbox+"\\"+info.Name(), CurrentDir+SpamBox+"\\"+info.Name())
+		err = os.Rename(cfg.InboxPath+"\\"+info.Name(), cfg.SpamPath+"\\"+info.Name())
 		if err != nil {
 			fmt.Println(err)
 			return
 		}
 	} else {
-		err = os.Rename(CurrentDir+Inbox+"\\"+info.Name(), CurrentDir+ClearBox+"\\"+info.Name())
+		err = os.Rename(cfg.InboxPath+"\\"+info.Name(), cfg.FilteredPath+"\\"+info.Name())
 		if err != nil {
 			fmt.Println(err)
 			return

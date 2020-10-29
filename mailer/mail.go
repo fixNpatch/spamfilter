@@ -6,10 +6,9 @@ import (
 	"io/ioutil"
 	"os"
 	"regexp"
+	"spamfilter/configurator"
 	"strings"
 )
-
-const Inbox = "mail/inbox"
 
 type Mail_ struct {
 	Address        Address
@@ -79,8 +78,8 @@ func returnValue(input string) (string, error) {
 	return string(decoded), nil
 }
 
-func readfile(filename string) string {
-	data, err := ioutil.ReadFile(Inbox + "/" + filename)
+func readfile(filename string, cfg *configurator.Config) string {
+	data, err := ioutil.ReadFile(cfg.InboxPath + "\\" + filename)
 	if err != nil { // если что-то пошло не так, то сохраняем ошибку и возвращаем пустую строку
 		fmt.Println(err)
 		return ""
@@ -88,11 +87,11 @@ func readfile(filename string) string {
 	return string(data)
 }
 
-func (m *Mail_) Parser(info os.FileInfo) error {
+func (m *Mail_) Parser(info os.FileInfo, cfg *configurator.Config) error {
 	var modifiedLineArray []string // массив строк, куда будем складывать полностью форматированные строки
 
 	// входные данные
-	readed := readfile(info.Name())
+	readed := readfile(info.Name(), cfg)
 	if readed == "" { // если данный файл пустой, то выдаем ошибку
 		fmt.Println("Error::Cant read file")
 		return fmt.Errorf("Error:Cant read file::Empty input")
