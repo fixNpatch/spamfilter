@@ -68,49 +68,58 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 			"Если не требуется изменений, оставляйте пустую строку и нажимайте Enter.")
 
 		fmt.Println("Введите свой email (будет использован для проверки).")
-		if _, err = fmt.Scanf("%s\n", &MyEmail); err != nil {
+		if _, err = fmt.Scanf("%s\n", &MyEmail); err != nil &&
+			err.Error() != "unexpected newline" {
 			fmt.Println(err)
 			return err
 		}
+
 		if MyEmail == "" {
 			MyEmail = cfg.TargetEmail
 		}
+		fmt.Println("Получатель:", MyEmail)
 
 		fmt.Println("Укажите абсолютный путь до директории входящих Email")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteInbox); err != nil {
+		if _, err = fmt.Scanf("%s\n", &AbsoluteInbox); err != nil &&
+			err.Error() != "unexpected newline" {
 			fmt.Println(err)
 			return err
 		}
 		if AbsoluteInbox == "" {
 			AbsoluteInbox = cfg.InboxPath
 		}
+		fmt.Println("Входящие:", AbsoluteInbox)
 
 		fmt.Println("Укажите абсолютный путь до директории отфильтрованных сообщений")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteGood); err != nil {
+		if _, err = fmt.Scanf("%s\n", &AbsoluteGood); err != nil &&
+			err.Error() != "unexpected newline" {
 			fmt.Println(err)
 			return err
 		}
 		if AbsoluteGood == "" {
 			AbsoluteGood = cfg.FilteredPath
 		}
+		fmt.Println("НеСпам:", AbsoluteGood)
 
 		fmt.Println("Укажите абсолютный путь до директории спам-писем")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteSpam); err != nil {
+		if _, err = fmt.Scanf("%s\n", &AbsoluteSpam); err != nil &&
+			err.Error() != "unexpected newline" {
 			fmt.Println(err)
 			return err
 		}
 		if AbsoluteSpam == "" {
 			AbsoluteSpam = cfg.SpamPath
 		}
+		fmt.Println("Спам:", AbsoluteSpam)
 
 		ready = false
 		fmt.Println("Всё верно? (Y/n)")
 		for true {
-			if _, err = fmt.Scanf("%s\n", &readyCheck); err != nil {
+			if _, err = fmt.Scanf("%s\n", &readyCheck); err != nil && err.Error() != "unexpected newline" {
 				fmt.Println(err)
 				return err
 			}
-			if strings.ToLower(readyCheck) == "y" {
+			if strings.ToLower(readyCheck) == "y" || readyCheck == "" {
 				ready = true
 				break
 			} else if strings.ToLower(readyCheck) == "n" {
@@ -148,29 +157,36 @@ func main() {
 
 	configMaster := new(configurator.Configurator)
 
+	// получаем настройки
 	cfg, err = configMaster.GetConfig()
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error::Main::GetConfig::", err)
 		return
 	}
 
+	// если настроки не были установлены
 	if !cfg.IsUsed {
-		err = configSave(&cfg, configMaster)
-	} else {
-		changeFlag, err := configCheck(&cfg)
+		err = configSave(&cfg, configMaster) // то производим первоначальную установку
+	} else { // в противном случае
+		changeFlag, err := configCheck(&cfg) // выводим текущие настройки и если пользователь хочет, может изменить их
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println("Error::Main::configCheck::", err)
 			return
 		}
-		if changeFlag {
-			err = configSave(&cfg, configMaster)
+		if changeFlag { // если пользователь решил изменить настройки
+			err = configSave(&cfg, configMaster) // запускаем функцию заполнения и сохранения настроек
+			if err != nil {
+				fmt.Println("Error::Main::configSave::", err)
+				return
+			}
+			cfg, err = configMaster.GetConfig() // считываем записанные настройки
 		}
 	}
 
 	// Смотрим наличие файлов во входящих
 	files, err := ioutil.ReadDir(cfg.InboxPath)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error::Main::FileSearch::", err)
 		return
 	}
 
@@ -389,7 +405,7 @@ func filter(info os.FileInfo, m *mailer.Mail_) {
 
 	err := m.Parser(info, &cfg) // Распределяем данные по структуре письма
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error::Main::filer::Parser::", err)
 		return
 	}
 
@@ -399,13 +415,13 @@ func filter(info os.FileInfo, m *mailer.Mail_) {
 	if action {
 		err = os.Rename(cfg.InboxPath+"\\"+info.Name(), cfg.SpamPath+"\\"+info.Name())
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println("Error::Main::filter::FileMove::", err)
 			return
 		}
 	} else {
 		err = os.Rename(cfg.InboxPath+"\\"+info.Name(), cfg.FilteredPath+"\\"+info.Name())
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println("Error::Main::filter::FileMove::", err)
 			return
 		}
 	}

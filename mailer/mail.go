@@ -81,7 +81,7 @@ func returnValue(input string) (string, error) {
 func readfile(filename string, cfg *configurator.Config) string {
 	data, err := ioutil.ReadFile(cfg.InboxPath + "\\" + filename)
 	if err != nil { // если что-то пошло не так, то сохраняем ошибку и возвращаем пустую строку
-		fmt.Println(err)
+		fmt.Println("Error::Mailer::readfile::ReadFile::", err)
 		return ""
 	}
 	return string(data)
@@ -146,7 +146,7 @@ func (m *Mail_) Parser(info os.FileInfo, cfg *configurator.Config) error {
 				if match, err := regexp.MatchString(`\?{1}(.+)\?{1}([B|Q])\?{1}(.+)\?{1}=`, subline); err == nil && match {
 					tmp, err := returnValue(subline)
 					if err != nil {
-						fmt.Println(err)
+						fmt.Println("Error::Mailer::?::", err)
 						return err
 					}
 					clearLine += strings.TrimSuffix(tmp, " ") + " "

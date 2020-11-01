@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f26c9663-a890-41d2-8d51-260e58d8e55e" name="Default Changelist" comment="init&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;mailer/mail.go">
-      <change afterPath="$PROJECT_DIR$/conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurator/configurator.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/inbox/6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/mail.go" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/mail.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurator/configurator.go" beforeDir="false" afterPath="$PROJECT_DIR$/configurator/configurator.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +20,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mailer/mail.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3338">
-                  <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#16#96#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-1768">
+                  <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -39,8 +29,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-408">
-                  <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+                <state relative-caret-position="-1802">
+                  <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
                   <folding>
                     <element signature="n#!!block;n#configCheck#0" />
                     <element signature="n#!!block;n#check_body#0" />
@@ -52,8 +42,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/configurator/configurator.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="127">
-                  <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+                <state relative-caret-position="59">
+                  <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -62,7 +52,16 @@
             <entry file="file://$PROJECT_DIR$/conf.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="13" selection-start-column="13" selection-end-column="13" />
+                  <caret column="14" selection-start-column="14" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bcup.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -74,8 +73,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/configurator/configurator.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+                <state relative-caret-position="255">
+                  <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -111,7 +110,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mail.go" />
-        <option value="$PROJECT_DIR$/bcup.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/task.txt" />
         <option value="$PROJECT_DIR$/mail/inbox/1.txt" />
@@ -119,10 +117,11 @@
         <option value="$PROJECT_DIR$/mail/inbox/3.txt" />
         <option value="$PROJECT_DIR$/mail/inbox/5.txt" />
         <option value="$PROJECT_DIR$/mail/inbox/4.txt" />
-        <option value="$PROJECT_DIR$/configurator/configurator.go" />
-        <option value="$PROJECT_DIR$/conf.json" />
         <option value="$PROJECT_DIR$/mailer/mail.go" />
+        <option value="$PROJECT_DIR$/bcup.txt" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/conf.json" />
+        <option value="$PROJECT_DIR$/configurator/configurator.go" />
       </list>
     </option>
   </component>
@@ -133,8 +132,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="764" />
-    <option name="y" value="101" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -144,6 +143,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,13 +154,29 @@
             <path>
               <item name="spamfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="spamfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="configurator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spamfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spamfilter" type="462c0819:PsiDirectoryNode" />
               <item name="mail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spamfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spamfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="bad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spamfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spamfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="good" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -214,7 +230,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14765458" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14925373" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.6511376" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -223,7 +239,7 @@
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.46045503" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.41495124" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -312,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bcup.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail/inbox — копия/1.txt" />
     <entry file="file://$PROJECT_DIR$/mail/inbox/3.txt" />
     <entry file="file://$PROJECT_DIR$/emailstruct.png">
@@ -335,20 +344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configurator/configurator.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -373,20 +368,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bcup.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mailer/mail.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3338">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#16#96#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1768">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configurator/configurator.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        <state relative-caret-position="-1802">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="n#!!block;n#configCheck#0" />
             <element signature="n#!!block;n#check_body#0" />
