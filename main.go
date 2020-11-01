@@ -79,7 +79,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) (ne
 			fmt.Print("Пропуск. Изменений нет >> ")
 			MyEmail = cfg.TargetEmail
 		}
-		MyEmail = strings.TrimSuffix(strings.TrimSuffix(MyEmail, "\r"), "\n")
+		MyEmail = strings.TrimSuffix(strings.TrimSuffix(MyEmail, "\n"), "\r")
 		fmt.Println("Получатель:", MyEmail)
 
 		fmt.Println("Укажите абсолютный путь до директории входящих Email")
@@ -89,7 +89,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) (ne
 			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteInbox = cfg.InboxPath
 		}
-		AbsoluteInbox = strings.TrimSuffix(strings.TrimSuffix(AbsoluteInbox, "\r"), "\n")
+		AbsoluteInbox = strings.TrimSuffix(strings.TrimSuffix(AbsoluteInbox, "\n"), "\r")
 		fmt.Println("Входящие:", AbsoluteInbox)
 
 		fmt.Println("Укажите абсолютный путь до директории отфильтрованных сообщений")
@@ -99,7 +99,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) (ne
 			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteGood = cfg.FilteredPath
 		}
-		AbsoluteGood = strings.TrimSuffix(strings.TrimSuffix(AbsoluteGood, "\r"), "\n")
+		AbsoluteGood = strings.TrimSuffix(strings.TrimSuffix(AbsoluteGood, "\n"), "\r")
 		fmt.Println("НеСпам:", AbsoluteGood)
 
 		fmt.Println("Укажите абсолютный путь до директории спам-писем")
@@ -109,7 +109,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) (ne
 			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteSpam = cfg.SpamPath
 		}
-		AbsoluteSpam = strings.TrimSuffix(strings.TrimSuffix(AbsoluteSpam, "\r"), "\n")
+		AbsoluteSpam = strings.TrimSuffix(strings.TrimSuffix(AbsoluteSpam, "\n"), "\r")
 		fmt.Println("Спам:", AbsoluteSpam)
 
 		ready = false
