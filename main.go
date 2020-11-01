@@ -61,8 +61,7 @@ func configCheck(cfg *configurator.Config) (bool, error) {
 }
 
 // Сохранение настроек
-func configSave(cfg *configurator.Config, master *configurator.Configurator) error {
-	var err error
+func configSave(cfg *configurator.Config, master *configurator.Configurator) (newCfg configurator.Config, err error) {
 	var readyCheck string
 	var ready bool
 
@@ -77,36 +76,40 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 		if MyEmail, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
 		} else if MyEmail == "\n" {
+			fmt.Print("Пропуск. Изменений нет >> ")
 			MyEmail = cfg.TargetEmail
 		}
-		MyEmail = strings.TrimSuffix(MyEmail, "\n")
+		MyEmail = strings.TrimSuffix(strings.TrimSuffix(MyEmail, "\r"), "\n")
 		fmt.Println("Получатель:", MyEmail)
 
 		fmt.Println("Укажите абсолютный путь до директории входящих Email")
 		if AbsoluteInbox, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
 		} else if AbsoluteInbox == "\n" {
+			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteInbox = cfg.InboxPath
 		}
-		AbsoluteInbox = strings.TrimSuffix(AbsoluteInbox, "\n")
+		AbsoluteInbox = strings.TrimSuffix(strings.TrimSuffix(AbsoluteInbox, "\r"), "\n")
 		fmt.Println("Входящие:", AbsoluteInbox)
 
 		fmt.Println("Укажите абсолютный путь до директории отфильтрованных сообщений")
 		if AbsoluteGood, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
 		} else if AbsoluteGood == "\n" {
+			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteGood = cfg.FilteredPath
 		}
-		AbsoluteGood = strings.TrimSuffix(AbsoluteGood, "\n")
+		AbsoluteGood = strings.TrimSuffix(strings.TrimSuffix(AbsoluteGood, "\r"), "\n")
 		fmt.Println("НеСпам:", AbsoluteGood)
 
 		fmt.Println("Укажите абсолютный путь до директории спам-писем")
 		if AbsoluteSpam, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
 		} else if AbsoluteSpam == "\n" {
+			fmt.Print("Пропуск. Изменений нет >> ")
 			AbsoluteSpam = cfg.SpamPath
 		}
-		AbsoluteSpam = strings.TrimSuffix(AbsoluteSpam, "\n")
+		AbsoluteSpam = strings.TrimSuffix(strings.TrimSuffix(AbsoluteSpam, "\r"), "\n")
 		fmt.Println("Спам:", AbsoluteSpam)
 
 		ready = false
@@ -114,7 +117,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 		for true {
 			if _, err = fmt.Scanf("%s\n", &readyCheck); err != nil && err.Error() != "unexpected newline" {
 				fmt.Println(err)
-				return err
+				return newCfg, err
 			}
 			if strings.ToLower(readyCheck) == "y" || readyCheck == "" {
 				ready = true
@@ -129,7 +132,7 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 			continue
 		}
 
-		newCfg := configurator.Config{
+		newCfg = configurator.Config{
 			IsUsed:       true,
 			InboxPath:    AbsoluteInbox,
 			FilteredPath: AbsoluteGood,
@@ -141,15 +144,16 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 		err = master.SetConfig(&newCfg)
 		if err != nil {
 			fmt.Println(err)
-			return err
+			return newCfg, err
 		}
 		break
 	}
-	return nil
+	return newCfg, nil
 }
 
 func main() {
 	var err error
+	var newCfg configurator.Config
 	fmt.Println(">> Фильтр запущен <<")
 
 	configMaster := new(configurator.Configurator)
@@ -163,7 +167,8 @@ func main() {
 
 	// если настроки не были установлены
 	if !cfg.IsUsed {
-		err = configSave(&cfg, configMaster) // то производим первоначальную установку
+		newCfg, err = configSave(&cfg, configMaster) // то производим первоначальную установку
+		cfg = newCfg
 	} else { // в противном случае
 		changeFlag, err := configCheck(&cfg) // выводим текущие настройки и если пользователь хочет, может изменить их
 		if err != nil {
@@ -171,12 +176,12 @@ func main() {
 			return
 		}
 		if changeFlag { // если пользователь решил изменить настройки
-			err = configSave(&cfg, configMaster) // запускаем функцию заполнения и сохранения настроек
+			newCfg, err = configSave(&cfg, configMaster) // запускаем функцию заполнения и сохранения настроек
 			if err != nil {
 				fmt.Println("Error::Main::configSave::", err)
 				return
 			}
-			cfg, err = configMaster.GetConfig() // считываем записанные настройки
+			cfg = newCfg
 		}
 	}
 
@@ -184,6 +189,7 @@ func main() {
 	files, err := ioutil.ReadDir(cfg.InboxPath)
 	if err != nil {
 		fmt.Println("Error::Main::FileSearch::", err)
+		fmt.Println("Try to go by Path:", cfg.InboxPath)
 		return
 	}
 
