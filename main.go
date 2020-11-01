@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"github.com/pkg/errors"
 	"io/ioutil"
@@ -15,7 +16,9 @@ var cfg configurator.Config
 var MyEmail string
 var ListOfMails []string
 
-var AbsoluteInbox, AbsoluteGood, AbsoluteSpam string
+var AbsoluteInbox string
+var AbsoluteGood string
+var AbsoluteSpam string
 
 // Загрузка настроек
 func configCheck(cfg *configurator.Config) (bool, error) {
@@ -39,13 +42,13 @@ func configCheck(cfg *configurator.Config) (bool, error) {
 		for true {
 			fmt.Println("Хотите изменить настройки? (y/N)")
 			_, err = fmt.Scanf("%s\n", &changeCommand)
-			if err != nil {
+			if err != nil && err.Error() != "unexpected newline" {
 				fmt.Println(err)
 				return false, err
 			}
 			if strings.ToLower(changeCommand) == "y" {
 				return true, nil
-			} else if strings.ToLower(changeCommand) == "n" {
+			} else if strings.ToLower(changeCommand) == "n" || changeCommand == "" {
 				return false, nil
 			} else {
 				fmt.Println("Некорректный ввод. Пожалуйста введите символ Y(да) либо N(нет)")
@@ -62,54 +65,48 @@ func configSave(cfg *configurator.Config, master *configurator.Configurator) err
 	var err error
 	var readyCheck string
 	var ready bool
+
+	stdin := bufio.NewReader(os.Stdin)
+
 	for true {
 
 		fmt.Println("Выбрано действие редактирования конфигурации =>\n" +
 			"Если не требуется изменений, оставляйте пустую строку и нажимайте Enter.")
 
 		fmt.Println("Введите свой email (будет использован для проверки).")
-		if _, err = fmt.Scanf("%s\n", &MyEmail); err != nil &&
-			err.Error() != "unexpected newline" {
+		if MyEmail, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
-			return err
-		}
-
-		if MyEmail == "" {
+		} else if MyEmail == "\n" {
 			MyEmail = cfg.TargetEmail
 		}
+		MyEmail = strings.TrimSuffix(MyEmail, "\n")
 		fmt.Println("Получатель:", MyEmail)
 
 		fmt.Println("Укажите абсолютный путь до директории входящих Email")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteInbox); err != nil &&
-			err.Error() != "unexpected newline" {
+		if AbsoluteInbox, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
-			return err
-		}
-		if AbsoluteInbox == "" {
+		} else if AbsoluteInbox == "\n" {
 			AbsoluteInbox = cfg.InboxPath
 		}
+		AbsoluteInbox = strings.TrimSuffix(AbsoluteInbox, "\n")
 		fmt.Println("Входящие:", AbsoluteInbox)
 
 		fmt.Println("Укажите абсолютный путь до директории отфильтрованных сообщений")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteGood); err != nil &&
-			err.Error() != "unexpected newline" {
+		if AbsoluteGood, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
-			return err
-		}
-		if AbsoluteGood == "" {
+		} else if AbsoluteGood == "\n" {
 			AbsoluteGood = cfg.FilteredPath
 		}
+		AbsoluteGood = strings.TrimSuffix(AbsoluteGood, "\n")
 		fmt.Println("НеСпам:", AbsoluteGood)
 
 		fmt.Println("Укажите абсолютный путь до директории спам-писем")
-		if _, err = fmt.Scanf("%s\n", &AbsoluteSpam); err != nil &&
-			err.Error() != "unexpected newline" {
+		if AbsoluteSpam, err = stdin.ReadString('\n'); err != nil {
 			fmt.Println(err)
-			return err
-		}
-		if AbsoluteSpam == "" {
+		} else if AbsoluteSpam == "\n" {
 			AbsoluteSpam = cfg.SpamPath
 		}
+		AbsoluteSpam = strings.TrimSuffix(AbsoluteSpam, "\n")
 		fmt.Println("Спам:", AbsoluteSpam)
 
 		ready = false
@@ -192,14 +189,6 @@ func main() {
 
 	// если есть файлы в рассматриваемой выше директории, то...
 	if len(files) > 0 {
-
-		/*TODO do not delete following*/
-
-		//a := mailer.Address{From:"", To:""}
-		//x := mailer.XHeaders{"", "","","","",""}
-		//h := mailer.Headers{"","","","","","","", x}
-		//b := mailer.Body{""}
-		//m := mailer.Mail_{Address:a, Headers:h} // создаем Менеджер писем
 
 		// Для каждого отдельного файла из списка этих файлов
 		for _, file := range files {
